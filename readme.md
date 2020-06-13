@@ -78,10 +78,18 @@ Place
 
 
 ## Wireframe
+### INDEX
+![index](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Index.jpg)
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+### CONTACT
+![Contact](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/CONTACT.jpg)
+### LOGIN
+![login](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Login.jpg)
 
-![Screenshot](screenshot.png)
+### ABOUT US
+![about us](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/About%20Us.jpg)
+
+
 
 
 
