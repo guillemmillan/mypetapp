@@ -79,6 +79,7 @@ Place
 
 
 ## Wireframe
+
 ### INDEX
 ![index](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Index.jpg)
 
@@ -90,6 +91,18 @@ Place
 
 ### ABOUT US
 ![about us](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/About%20Us.jpg)
+
+### PROFILE
+![Profile](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Profile.jpg)
+
+### FAVORITES
+![Favorites](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/favorites.jpg)
+
+### PARQUES 
+![Parques](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Parques.jpg)
+
+### PETS
+![Pets](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/pets.jpg)
 
 
 
