@@ -20,38 +20,38 @@
 
 ## Routes
 |Method|URL|Description
-
+```
 GET | / |  users and non users can see recomended places
 
-POST | / |  users and non users cand find nearest places only typing the postal code  
-
+GET | / |  users and non users cand find nearest places only typing the postal code  
+```
+```
 GET | /places | user can see all the places
 
 GET | /places/:id | user can see places details
-
+```
+```
 GET | /aboutus | users can find all the information about the app 
 
 GET | /contact | users can find all the channels of communication of the app
 
 POST | /contact |  user can contact to get info or solve any problem about the app
+```
 
+```
 GET | /signup | User can  see the diferent roles inside the app and define her own role in the app. Redirect if user is loged to /
 
-POST | /signup | the user define her role inside the app
-
-GET | /signup/typeofuser |  user have access to the form. Redirect if user is loged
-POST | /signup/typeofuser | the user add all the infromation required 
-
-
-
+POST | /signup | the user define her role inside the app and add all
+```
+```
 GET | /login | user see the login form or redirect to /profile if user is loged
 POST | /login | user logs in app or redirect to /profile if user is loged
-
-
+```
+```
 GET | /user | user can find all her favortite places
 GET | /user/porfile | can see all the information
 POST | /user/porfile/edit | can change profile information including the location
-
+```
 
 
 ## MODELS
@@ -75,16 +75,18 @@ Place
 - location: String
 - dimension: String
 - image: String
+- numberOfPersons: String
 
 
 ## Wireframe
 ### INDEX
 ![index](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Index.jpg)
 
-### CONTACT
-![Contact](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/CONTACT.jpg)
 ### LOGIN
 ![login](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Login.jpg)
+
+### CONTACT
+![Contact](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/CONTACT.jpg)
 
 ### ABOUT US
 ![about us](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/About%20Us.jpg)
