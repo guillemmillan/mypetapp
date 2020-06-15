@@ -57,6 +57,7 @@ POST | /user/porfile/edit | can change profile information including the locatio
 ## MODELS
 
 User models
+- email: String
 - username: String
 - password: String
 - image: String
@@ -66,7 +67,7 @@ User models
 Pets 
 - name: String
 - image: String
-- age: String
+- age: Number
 - breed: String
 
 Place
@@ -75,7 +76,7 @@ Place
 - location: String
 - dimension: String
 - image: String
-- numberOfPersons: String
+- persons: Number
 
 ## Webflow
 ![Weblflow](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/webflow-MyPetApp-min.png)
