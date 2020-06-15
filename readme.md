@@ -78,7 +78,7 @@ Place
 - numberOfPersons: String
 
 ## Webflow
-![Weblflow](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Index.jpg)
+![Weblflow](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/webflow-MyPetApp-min.png)
 
 ## Wireframe
 
