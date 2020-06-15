@@ -21,9 +21,9 @@
 ## Routes
 |Method|URL|Description
 ```
-GET | / |  users and non users can see recomended places
+GET | / |  all users can see recomended places
 
-GET | / |  users and non users cand find nearest places only typing the postal code  
+GET | / |  all users cand find nearest places only typing the postal code  
 ```
 ```
 GET | /places | user can see all the places
@@ -48,7 +48,7 @@ GET | /login | user see the login form or redirect to /profile if user is loged
 POST | /login | user logs in app or redirect to /profile if user is loged
 ```
 ```
-GET | /user | user can find all her favortite places
+GET | /user | loged user can find all her favortite places
 GET | /user/porfile | can see all the information
 POST | /user/porfile/edit | can change profile information including the location
 ```
@@ -77,6 +77,8 @@ Place
 - image: String
 - numberOfPersons: String
 
+## Webflow
+![Weblflow](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/Index.jpg)
 
 ## Wireframe
 
