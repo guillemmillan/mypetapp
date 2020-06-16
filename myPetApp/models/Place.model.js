@@ -9,6 +9,7 @@ const placeSchema = new Schema({
   image:{
       type: String,
     default:'../public/images/location.default.png'
+    /*    default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/location-deafult.png*/
     },
     persons: Number
 });

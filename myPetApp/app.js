@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+ 
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express      = require('express');
@@ -8,8 +9,7 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
-const bcrypt       = require('bcryptjs') 
-
+const bcrypt       = require('bcryptjs')
 
 mongoose
   .connect('mongodb://localhost/mypetapp', {useNewUrlParser: true})
@@ -26,10 +26,13 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 const app = express();
 
 // Middleware Setup
+require('./configs/session.configs')(app)
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 
 
 // Express View engine setup
