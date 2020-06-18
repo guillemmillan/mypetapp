@@ -1,28 +1,49 @@
 <!--<h1>{{title}}</h1>
 h2>Welcome to {{title}}</p> -->
 <div class="container fluid mainBanner">
-  <div class="heading"> 
+  <div class="heading">
     <h1>My Pet App</h1>
     <h3>Discover new places to enjoy with the best company</h3>
   </div>
 </div>
 <section id="search-place" class="search-place">
-<!--<h2>Find your place</h2>-->
-<form class="search-input" action="/place" method="get"> 
-<input type="text" placeholder="search place" name="search-place">
-<button type="submit"><i >Search</i></button> 
-</form>
+  <!--<h2>Find your place</h2>-->
+  <form class="search-input" action="/place" method="get">
+    <input type="text" placeholder="search place" name="search-place">
+    <button type="submit"><i>Search</i></button>
+  </form>
 </section>
 
-
+<h2>Recomended places</h2>
 <section id="places" class="recomendedPlaces">
-  <h2>Recomended places</h2>
+
   <div>
-    {{#each place}}
-    {{> places}}
+    {{#each places}}
+    <div class="col-md-4">
+      <img class="card-img-top" src="{{this.image}}" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+      </div>
+      {{#if user._id}}
+      <form action="/favorites/{{parkId}}" method="POST">
+        <button type="submit">
+          Estrella
+        </button>
+      </form>
+      {{#else}}
+      <a href="/">
+        Estrella
+      </a>
+      {{/else}}
+      {{/if}}
+
+    </div>
+    <br>
     {{/each}}
   </div>
+
 </section>
-<section id="type-of-place" class="place-type"> 
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet possimus id error, ea ut ipsam velit laudantium repellat. Ut dolorum iste expedita, repellendus fuga facilis aspernatur doloribus placeat temporibus.</p>
+<section id="type-of-place" class="place-type">
+  {{!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet possimus id error, ea ut ipsam velit
+    laudantium repellat. Ut dolorum iste expedita, repellendus fuga facilis aspernatur doloribus placeat temporibus.</p> --}}
 </section>
