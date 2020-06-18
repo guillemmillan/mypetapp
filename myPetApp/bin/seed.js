@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Place = require('../models/Place.model');
-const DB_NAME = 'places-project';
+const DB_NAME = 'mypetapp';
 
 mongoose.connect(`mongodb://localhost/${DB_NAME}`, {
     useCreateIndex: true,
