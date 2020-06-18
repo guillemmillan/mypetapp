@@ -156,6 +156,7 @@ router.post('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/');
 });
+router.get("/logout", (req, res)=> res.redirect("/") )
 router.get("/", (req,res) => res.render("index"))
 
 

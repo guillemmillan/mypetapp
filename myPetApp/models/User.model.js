@@ -22,8 +22,8 @@ const userSchema = new Schema({
     },
   image:{
       type: String,
-    //default:'../public/images/user-default.png'
-    default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/user-default.png'
+    default:'../images/user-default.png'
+    //default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/user-default.png'
     },
     location: String,
   /*pets:{

@@ -1,10 +1,72 @@
 body {
-  padding: 50px;
+  margin: 0px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
-  .mainNav{
-    float:left;
-  }
+
+.maninMenu {
+  position: sticky;
+  top: 0px;
+  background-color: grey;
+  display: flex;
+  display: inline-block;
+  padding: 10px; }
+
+.mainNav {
+  float: left;
+  list-style: none; }
+
+.mainNav a {
+  text-decoration: none;
+  color: white;
+  padding: 5px; }
+
+.mainNav :hover {
+  text-decoration: underline;
+  background-color: yellow;
+  padding: 5px; }
+
+.mainNav li {
+  flex-grow: 1; }
+
+.mainBanner {
+  background-image: url(https://images.unsplash.com/photo-1489440543286-a69330151c0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px; }
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black; }
+
+.heading h3 {
+  padding: 20px 20px 20px; }
+
+.search-place {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  height: 100px; }
+
+.search-input {
+  color: rgba(0, 0, 0, 0); }
+
+.recomendedPlaces {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin: 5% 0 5% 0; }
+
+.recomendedPlaces div {
+  width: 40%;
+  height: 200px; }
+
 /*# sourceMappingURL=style.css.map */
