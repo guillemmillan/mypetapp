@@ -124,7 +124,18 @@ router.post("/signup", async (req, res, next) => {
 
 
 //ruta de login
-
+router.get('/logout', function(req, res, next) {
+  if (req.session) {
+    // delete session object
+    req.session.destroy(function(err) {
+      if(err) {
+        return next(err);
+      } else {
+        return res.redirect('/');
+      }
+    });
+  }
+});
 
 router.get('/login', (req, res) => res.render('auth/login'));
 
@@ -152,11 +163,11 @@ router.post('/login', (req, res, next) => {
     })
     .catch(error => next(error));
 });
-router.post('/logout', (req, res) => {
+/*router.post('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/');
-});
-router.get("/logout", (req, res)=> res.redirect("/") )
+});*/
+
 router.get("/", (req,res) => res.render("index"))
 
 
