@@ -16,27 +16,31 @@ h2>Welcome to {{title}}</p> -->
 
 <h2>Recomended places</h2>
 <section id="places" class="recomendedPlaces">
-
+  {{#if user._id}}
+  <form action="/favorites/{{parkId}}" method="POST">
+    <button type="submit">
+      Favorito
+    </button>
+  </form>
   <div>
+    {{/if}}
     {{#each places}}
     <div class="col-md-4">
       <img class="card-img-top" src="{{this.image}}" alt="" />
       <div class="card-body">
         <h5 class="card-title">{{this.name}}</h5>
       </div>
-      {{#if user._id}}
+      {{#if user}}
       <form action="/favorites/{{parkId}}" method="POST">
         <button type="submit">
           Favorito
         </button>
       </form>
-      {{#else}}
+      {{else}}
       <a href="/">
         Estrella
       </a>
-      {{/else}}
       {{/if}}
-
     </div>
     <br>
     {{/each}}
