@@ -26,5 +26,12 @@ router.get("/", async (req, res) => {
     next(err);
   }
 });
+router.get("/favorites" , (req, res) => {
+  res.render("users/favorite")
+})
+
+router.post("/favorites/", (req, res) => {
+
+})
 
 module.exports = router;
