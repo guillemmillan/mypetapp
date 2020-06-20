@@ -127,10 +127,22 @@ router.get("/userProfile", (req, res) => {
   });
 });
 
-router.get("/favorites", (req, res) => {
-  res.render("users/favorites", {
-    userInSession: req.session.currentUser,
-  });
+router.get("/favorites", async (req, res) => {
+  try {
+
+    const {
+      _id: userId
+    } = req.session.currentUser
+    const user = await User.findById({
+      _id: userId
+    }).populate('parques').lean()
+    console.log(user)
+    res.render("users/favorites", user);
+
+  } catch (error) {
+    console.log(error)
+  }
+
 });
 
 router.post("/favorites/:placeId", async (req, res) => {
