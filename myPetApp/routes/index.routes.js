@@ -30,5 +30,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:placeId", (req, res) => {
+  //const user = req.session.currentUser;
+  Place.findById(req.params.placeId)
+    .then(placeDetails => {
+      console.log("Pasando places", placeDetails)
+      res.render('placeDetails', {
+        place: placeDetails,
+        user: req.session.currentUser
+      })
+    })
+    .catch(error => {
+      console.log("ERROR", error)
+    })
+})
+
 
 module.exports = router;

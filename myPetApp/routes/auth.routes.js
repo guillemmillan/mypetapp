@@ -3,6 +3,7 @@ const {
 } = require("express");
 const bcryptjs = require("bcryptjs");
 const User = require("../models/User.model");
+const Place = require("../models/Place.model");
 const mongoose = require("mongoose");
 const router = Router();
 
@@ -171,7 +172,7 @@ router.post("/favorites/:placeId", async (req, res) => {
     }, {
       new: true
     }) // act del user.parque para que se muestre en la db
-    console.log(agregarParque.parques)
+    console.log('SE HA AGREGADO UN PARQUE A FAVORITO', agregarParque.parques)
   } else {
     const quitarParque = await User.findByIdAndUpdate({
       _id: userId
@@ -187,5 +188,8 @@ router.post("/favorites/:placeId", async (req, res) => {
   res.redirect("/favorites")
 })
 
+
+
+
+
 module.exports = router;
-/* */

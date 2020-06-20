@@ -1,0 +1,13 @@
+<div>
+  <img class="card-img-top" src="{{place.image}}" alt="" />
+  <div class="card-body">
+    <h2>{{place.name}}</h2>
+    <p>{{place.description}}</p>
+  </div>
+  {{#if user._id}}
+  <a href="/favorites">Go back to favorites places</a>
+  {{else}}
+  <a href="/">
+    Go back to home
+  </a>
+  {{/if}}
