@@ -6,12 +6,11 @@ const placeSchema = new Schema({
   name: String,
   location: String,
   dimension: String,
-  image:{
-      type: String,
-    default:'../public/images/location.default.png'
-    /*    default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/location-deafult.png*/
-    },
-    persons: Number
+  image: {
+    type: String,
+    default: '../public/images/location.default.png'
+  },
+  persons: Number
 });
 
 const Place = mongoose.model("Place", placeSchema);

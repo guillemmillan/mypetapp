@@ -31,14 +31,15 @@ h2>Welcome to {{title}}</p> -->
         <h5 class="card-title">{{this.name}}</h5>
       </div>
       {{#if user}}
-      <form action="/favorites/{{parkId}}" method="POST">
+      <form action="/favorites/{{_id}}" method="POST">
+        <!--<form action="/favorites" method="POST"></form> -->
         <button type="submit">
           Favorito
         </button>
       </form>
       {{else}}
-      <a href="/">
-        Estrella
+      <a href="/login">
+        Logueate para añadir a tus favoritos
       </a>
       {{/if}}
     </div>

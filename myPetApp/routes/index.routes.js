@@ -19,19 +19,16 @@ router.get("/", async (req, res) => {
     const allPlaces = await Place.find().lean();
     const user = req.session.currentUser;
     res.render("index", {
-      places: allPlaces.map((place) => ({ user, ...place })),
+      places: allPlaces.map((place) => ({
+        user,
+        ...place
+      })),
     });
   } catch (err) {
     console.error(err);
     next(err);
   }
 });
-router.get("/favorites" , (req, res) => {
-  res.render("users/favorite")
-})
 
-router.post("/favorites/", (req, res) => {
-
-})
 
 module.exports = router;

@@ -24,13 +24,8 @@ const userSchema = new Schema({
   image: {
     type: String,
     default: '../images/user-default.png'
-    //default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/user-default.png'
   },
   location: String,
-  /*pets:{
-        type: Array,
-        ref:'Pet'
-    }*/
   parques: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Place"

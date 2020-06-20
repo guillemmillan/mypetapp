@@ -1,4 +1,6 @@
-const { Router } = require("express");
+const {
+  Router
+} = require("express");
 const bcryptjs = require("bcryptjs");
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
@@ -13,12 +15,15 @@ router.get("/start", async (req, res) => {
 });
 
 router.post("/signup", async (req, res, next) => {
-  const { username, email, password } = req.body;
+  const {
+    username,
+    email,
+    password
+  } = req.body;
   const hasEmptyRequiredField = !username || !email || !password;
   if (hasEmptyRequiredField) {
     return res.render("auth/signup", {
-      errorMessage:
-        "All fields are mandatory. Please provide your username, email and password.",
+      errorMessage: "All fields are mandatory. Please provide your username, email and password.",
     });
   }
   const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
@@ -26,8 +31,7 @@ router.post("/signup", async (req, res, next) => {
   if (hasIncorrectPassCriteria) {
     //console.log("HA PASADO LA CLAVE")
     return res.status(400).render("auth/signup", {
-      errorMessage:
-        "Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.",
+      errorMessage: "Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.",
     });
   }
   try {
@@ -55,8 +59,7 @@ router.post("/signup", async (req, res, next) => {
     }
     if (hasDuplicateUniqueField) {
       return res.status(400).render("auth/signup", {
-        errorMessage:
-          "Username and email need to be unique. Either username or email is already used.",
+        errorMessage: "Username and email need to be unique. Either username or email is already used.",
       });
     }
     next(error);
@@ -82,14 +85,19 @@ router.get("/login", (req, res) => res.render("auth/login"));
 // .post() login route ==> to process form data
 router.post("/login", async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const {
+      email,
+      password
+    } = req.body;
     const hasEmptyRequiredField = !email || !password;
     if (hasEmptyRequiredField) {
       return res.render("auth/login", {
         errorMessage: "Please enter both, email and password to login.",
       });
     }
-    const currentUser = await User.findOne({ email });
+    const currentUser = await User.findOne({
+      email
+    });
     if (!currentUser) {
       return res.render("auth/login", {
         errorMessage: "Email is not registered. Try with other email.",
@@ -118,5 +126,54 @@ router.get("/userProfile", (req, res) => {
     userInSession: req.session.currentUser,
   });
 });
+
+router.get("/favorites", (req, res) => {
+  res.render("users/favorites", {
+    userInSession: req.session.currentUser,
+  });
+});
+
+router.post("/favorites/:placeId", async (req, res) => {
+  const {
+    _id: userId
+  } = req.session.currentUser
+  const {
+    placeId
+  } = req.params
+  const user = await User.findById({
+    _id: userId
+  }).lean()
+  const parque = user.parques.find((parqueId) => {
+    console.log("ID", parqueId, placeId)
+    return parqueId == placeId
+  })
+  console.log("Parque", parque)
+
+  if (!parque) {
+    const agregarParque = await User.findByIdAndUpdate({
+      _id: userId
+    }, {
+      $push: {
+        parques: placeId
+      }
+    }, {
+      new: true
+    }) // act del user.parque para que se muestre en la db
+    console.log(agregarParque.parques)
+  } else {
+    const quitarParque = await User.findByIdAndUpdate({
+      _id: userId
+    }, {
+      $pull: {
+        parques: placeId
+      }
+    }, {
+      new: true
+    })
+    console.log('Parque quitado con éxtio GUILLLEM!', quitarParque)
+  }
+  res.redirect("/favorites")
+})
+
 module.exports = router;
 /* */
