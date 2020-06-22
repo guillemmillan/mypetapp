@@ -31,77 +31,34 @@ router.get("/", async (req, res) => {
   }
 });
 
-// router.get('/:placeId', async (req, res) => {
-//   try {
-//     const placeDetails = await Place.findById(req.params.placeId)
-//     res.render('placeDetails', {
-//       place: placeDetails,
-//       user: req.session.currentUser
-//     })
-//   } catch (error) {
-//     console.log('ERROR AL HACER LA RUTA', error)
-//   }
-// })
 
+//Place details
 
-// router.post("/favorites/:placeId", async (req, res) => {
-//   const {
-//     _id: userId
-//   } = req.session.currentUser
-//   const {
-//     placeId
-//   } = req.params
-//   const user = await User.findById({
-//     _id: userId
-//   }).lean()
-//   const parque = user.parques.find((parqueId) => {
-//     console.log("ID", parqueId, placeId)
-//     return parqueId == placeId
-//   })
-//   console.log("Parque", parque)
+router.get('/:placeId', async (req, res) => {
+  try {
+    const placeDetails = await Place.findById(req.params.placeId)
+    res.render('placeDetails', {
+      place: placeDetails,
+      user: req.session.currentUser
+    })
+  } catch (error) {
+    console.log('ERROR AL HACER LA RUTA', error)
+  }
+})
 
-//   if (!parque) {
-//     const agregarParque = await User.findByIdAndUpdate({
-//       _id: userId
-//     }, {
-//       $push: {
-//         parques: placeId
-//       }
-//     }, {
-//       new: true
-//     }) // act del user.parque para que se muestre en la db
-//     console.log('SE HA AGREGADO UN PARQUE A FAVORITO', agregarParque.parques)
-//   } else {
-//     const quitarParque = await User.findByIdAndUpdate({
-//       _id: userId
-//     }, {
-//       $pull: {
-//         parques: placeId
-//       }
-//     }, {
-//       new: true
-//     })
-//     console.log('Parque quitado con éxtio GUILLLEM!', quitarParque)
-//   }
-//   res.redirect("/favorites")
-// })
-
-
+//Place details alternative with promises
 
 // router.get("/:placeId", (req, res) => {
-//   //const user = req.session.currentUser;
 //   Place.findById(req.params.placeId)
 //     .then(placeDetails => {
 //       console.log("Pasando places", placeDetails)
-//       res.render('placeDetails', {
-//         place: placeDetails,
-//         user: req.session.currentUser
-//       })
-//     })
-//     .catch(error => {
-//       console.log("ERROR", error)
-//     })
+//       res.render("placeDetails", {
+//         userInSession: req.session.currentUser,
+//       });
+//     });
+
 // })
+
 
 
 module.exports = router;
