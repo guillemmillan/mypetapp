@@ -11,7 +11,9 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 
 mongoose
-  .connect("mongodb://localhost/mypetapp", { useNewUrlParser: true })
+  .connect("mongodb://localhost/mypetapp", {
+    useNewUrlParser: true
+  })
   .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -20,6 +22,8 @@ mongoose
   .catch((err) => {
     console.error("Error connecting to mongo", err);
   });
+
+
 
 const app_name = require("./package.json").name;
 const debug = require("debug")(
@@ -33,7 +37,9 @@ require("./configs/session.configs")(app);
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 
 // Express View engine setup
@@ -51,8 +57,17 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
+
+//Partials
+
+hbs.registerPartials(__dirname + "/views/partials");
+
 // default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
+
+
+
+
+app.locals.title = "My pet App";
 
 const index = require("./routes/index.routes");
 const authRouter = require("./routes/auth.routes");

@@ -188,7 +188,16 @@ router.post("/favorites/:placeId", async (req, res) => {
   res.redirect("/favorites")
 })
 
+router.get("/:placeId", (req, res) => {
+  Place.findById(req.params.placeId)
+    .then(placeDetails => {
+      console.log("Pasando places", placeDetails)
+      res.render("/placesDetails", {
+        userInSession: req.session.currentUser,
+      });
+    });
 
+})
 
 
 

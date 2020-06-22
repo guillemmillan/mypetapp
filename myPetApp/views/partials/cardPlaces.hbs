@@ -1,0 +1,21 @@
+<div class="col-md-4">
+  <img class="card-img-top" src="{{this.image}}" alt="" />
+  <div class="card-body">
+    <a href="/{{this._id}}">
+      <h5 class="card-title">{{this.name}}</h5>
+    </a>
+  </div>
+  {{#if user}}
+  <form action="/favorites/{{_id}}" method="POST">
+    <!--<form action="/favorites" method="POST"></form> -->
+    <button type="submit">
+      Favorito
+    </button>
+  </form>
+  {{else}}
+  <a href="/login">
+    Logueate para añadir a tus favoritos
+  </a>
+  {{/if}}
+</div>
+<br>
