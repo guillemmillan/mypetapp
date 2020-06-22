@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Place = require("../models/Place.model.js");
 const User = require("../models/Place.model");
+const Pet = require("../models/Pet.model");
 
 
 
@@ -31,6 +32,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Pets route
+
+router.get('/pets', async (req, res) => {
+  try {
+    const pets = await Pet.findById(req.params.petsId)
+    res.render('users/pets', {
+      petsId: pets,
+      user: req.session.currentUser
+    })
+  } catch (error) {
+    console.log('ERROR AL HACER LA RUTA', error)
+  }
+})
+
 
 //Place details
 
@@ -45,6 +60,9 @@ router.get('/:placeId', async (req, res) => {
     console.log('ERROR AL HACER LA RUTA', error)
   }
 })
+
+
+
 
 //Place details alternative with promises
 

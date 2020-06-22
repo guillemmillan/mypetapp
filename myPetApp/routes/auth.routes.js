@@ -6,6 +6,7 @@ const User = require("../models/User.model");
 const Place = require("../models/Place.model");
 const mongoose = require("mongoose");
 const router = Router();
+const Pet = require("../models/Pet.model");
 
 router.get("/signup", async (req, res) => res.render("auth/signup"));
 
@@ -127,6 +128,9 @@ router.get("/userProfile", (req, res) => {
     userInSession: req.session.currentUser,
   });
 });
+
+
+//Favourite route
 
 router.get("/favorites", async (req, res) => {
   try {
