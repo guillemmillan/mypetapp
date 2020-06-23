@@ -45,7 +45,23 @@ router.get('/pets', async (req, res) => {
     console.log('ERROR AL HACER LA RUTA', error)
   }
 })
-
+router.get('/pet-add', (req, res)=> {
+  res.render('users/pet-add', {
+    user: req.session.currentUser
+  })
+})
+router.post('/pets-add',  (req, res) => {
+ const {name, image, age, breed}=req.body;
+  const newPet = new Pet({name, image, age, breed})
+  newPet.save()
+  .then((pet)=> {
+    res.redirect('/pets');
+  })
+    .catch((error)=> {
+      console.log("error", error)
+    })
+  res.render("/userProfile")
+})
 
 //Place details
 

@@ -29,6 +29,10 @@ const userSchema = new Schema({
   parques: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Place"
+  }],
+  pets:[{
+    type: mongoose.SchemaTypes.ObjectId,
+    ref:"Pets"
   }]
 });
 

@@ -1,6 +1,9 @@
 {{#if user}}
 <h2>Your pets {{ user.username }}!</h2>
 <p>This is your pets page my friend!</p>
+<div class="btn-add">
+  <a href="/pet-add">Add your pet</a>
+  </div>
 {{else}}
 <p>Still no logged in user, sorry!</p>
 {{/if}}
