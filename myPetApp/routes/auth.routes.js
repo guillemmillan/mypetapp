@@ -130,67 +130,7 @@ router.get("/userProfile", (req, res) => {
 });
 
 
-//Favourite route
 
-router.get("/favorites", async (req, res) => {
-  try {
-
-    const {
-      _id: userId
-    } = req.session.currentUser
-    const user = await User.findById({
-      _id: userId
-    }).populate('parques').lean()
-    console.log(user)
-    res.render("users/favorites", user);
-
-  } catch (error) {
-    console.log(error)
-  }
-
-});
-
-router.post("/favorites/:placeId", async (req, res) => {
-  const {
-    _id: userId
-  } = req.session.currentUser
-  const {
-    placeId
-  } = req.params
-  const user = await User.findById({
-    _id: userId
-  }).lean()
-  const parque = user.parques.find((parqueId) => {
-    console.log("ID", parqueId, placeId)
-    return parqueId == placeId
-  })
-  console.log("Parque", parque)
-
-  if (!parque) {
-    const agregarParque = await User.findByIdAndUpdate({
-      _id: userId
-    }, {
-      $push: {
-        parques: placeId
-      }
-    }, {
-      new: true
-    }) // act del user.parque para que se muestre en la db
-    console.log('SE HA AGREGADO UN PARQUE A FAVORITO', agregarParque.parques)
-  } else {
-    const quitarParque = await User.findByIdAndUpdate({
-      _id: userId
-    }, {
-      $pull: {
-        parques: placeId
-      }
-    }, {
-      new: true
-    })
-    console.log('Parque quitado con éxtio GUILLLEM!', quitarParque)
-  }
-  res.redirect("/favorites")
-})
 
 
 

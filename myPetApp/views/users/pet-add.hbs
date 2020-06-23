@@ -1,13 +1,13 @@
 {{#if user}}
 <h2>What pet {{ user.username }} do want to add?</h2>
 <p>Add your pets with this form</p>
-<form action="pet-add" method="post">
+<form action="pet-add" method="POST">
   <label for="">What his name:</label>
   <input type="text" name="name">
-    <br>
-  <label for="">Add an image</label>
-  <input type="file" name="image">
-    <br>
+  <br>
+
+  <!-- <input type="file" name="image"> -->
+  <br>
   <label for="">Age:</label>
   <input type="number" name="age">
   <br>

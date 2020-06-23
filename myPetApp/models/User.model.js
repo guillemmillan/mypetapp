@@ -30,9 +30,9 @@ const userSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Place"
   }],
-  pets:[{
+  pets: [{
     type: mongoose.SchemaTypes.ObjectId,
-    ref:"Pets"
+    ref: "Pet"
   }]
 });
 
