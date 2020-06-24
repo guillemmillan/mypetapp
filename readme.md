@@ -78,6 +78,9 @@ Place
 - image: String
 - persons: Number
 
+## Kanban
+See documentation in [Trello kanban](https://trello.com/b/bXSvBurO/mypetapp)
+
 ## Webflow
 ![Weblflow](https://raw.githubusercontent.com/guillemmillan/mypetapp/master/wireframe/webflow-MyPetApp-min.png)
 
