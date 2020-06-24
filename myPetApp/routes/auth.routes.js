@@ -111,7 +111,7 @@ router.post("/login", async (req, res, next) => {
     );
     if (hasValidPassword) {
       req.session.currentUser = currentUser;
-      return res.redirect("/");
+      return res.redirect("/userProfile");
     }
 
     return res.render("auth/login", {
@@ -128,6 +128,8 @@ router.get("/userProfile", (req, res) => {
     userInSession: req.session.currentUser,
   });
 });
+
+
 
 
 
