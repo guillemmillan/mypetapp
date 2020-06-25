@@ -83,6 +83,19 @@ router.post("/favorites/:placeId", async (req, res) => {
   res.redirect("/favorites")
 })
 
+// Delete pet
+
+router.get('/pets/delete/:petId', (req, res) => {
+  Pet.findByIdAndRemove(req.params.petId)
+    .then((pet) => {
+      res.redirect('/pets')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+
 // Pets route
 
 router.get('/pets', async (req, res) => {
