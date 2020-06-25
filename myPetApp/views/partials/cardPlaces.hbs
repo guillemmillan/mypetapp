@@ -9,7 +9,11 @@
   <form action="/favorites/{{_id}}" method="POST">
     <!--<form action="/favorites" method="POST"></form> -->
     <button type="submit">
-      Favorito
+      {{#if favorite}}
+      Ya es favorito
+      {{else}}
+      Agregalo a favorito
+      {{/if}}
     </button>
   </form>
   {{else}}

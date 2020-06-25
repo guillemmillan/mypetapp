@@ -3,7 +3,7 @@ const router = express.Router();
 const Place = require("../models/Place.model.js");
 const User = require("../models/User.model");
 const Pet = require("../models/Pet.model");
-
+const WithAuth = require('../utils/utils')
 
 
 router.get("/signup", async (req, res) => res.render("auth/signup"));
@@ -98,7 +98,7 @@ router.get('/pets/delete/:petId', (req, res) => {
 
 // Pets route
 
-router.get('/pets', async (req, res) => {
+router.get('/pets', WithAuth, async (req, res) => {
   try {
     const user = await User.findById(
       req.session.currentUser._id
@@ -218,12 +218,32 @@ router.post('/userProfile/edit', async (req, res, next) => {
 router.get("/", async (req, res) => {
   try {
     const allPlaces = await Place.find().lean();
-    const user = req.session.currentUser;
+    //const user = req.session.currentUser;
+    const {
+      currentUser: {
+        _id
+      } = {}
+    } = req.session
+    //Buscar Usuario
+    const [user] = await User.find({
+      _id
+    })
+    const {
+      parques = []
+    } = user || {}
+    //Favoritos del user
+    const isFavorite = placeId => parques.includes(placeId)
+    const places = allPlaces.map((place) => ({
+      ...place,
+      user,
+      favorite: isFavorite(place._id)
+    }));
+
+    // console.log('ÚSUSARIO', user)
+    // console.log('PLACES', places)
+
     res.render("index", {
-      places: allPlaces.map((place) => ({
-        user,
-        ...place
-      })),
+      places
     });
   } catch (err) {
     console.error(err);
