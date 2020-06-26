@@ -111,6 +111,17 @@ router.get('/pets', WithAuth, async (req, res) => {
   }
 
 });
+router.get('/pets/:petId', async (req, res) => {
+  try {
+    const petDetails = await Pet.findById(req.params.petId)
+    res.render('petDetails', {
+      pet: petDetails,
+      user: req.session.currentUser
+    })
+  } catch (error) {
+    console.log('ERROR AL HACER LA RUTA', error)
+  }
+})
 
 
 router.get('/pet-add', (req, res) => {
