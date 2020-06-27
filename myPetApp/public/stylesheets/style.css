@@ -3,6 +3,16 @@ body {
   padding: 0px;
   font: 14px "Roboto", Helvetica, Arial, sans-serif; }
 
+.main {
+  height: 100%;
+  background-image: url(../images/bg_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.mainHeading {
+  padding-top: 20%; }
+
 a {
   color: #000; }
 
@@ -101,37 +111,64 @@ a {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0; }
 
-.heading {
+.signup {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black; }
+  height: 100vh;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center; }
 
-.heading h3 {
-  padding: 20px 20px 20px; }
+.logoForm {
+  margin-top: 45%;
+  height: 150px; }
 
-.search-input {
-  color: rgba(0, 0, 0, 0); }
+.signuptxt {
+  padding-right: 70%; }
 
-.recomendedPlaces {
+.downSign {
   display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  margin: 5% 0 5% 0; }
+  flex-direction: column;
+  width: 90%;
+  margin: 0% 5% 5% 5%; }
 
-.recomendedPlaces div {
-  width: 40%;
-  height: 200px; }
+.downLog {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5%; }
+
+.input {
+  padding: 10px;
+  border-radius: 33px;
+  background-color: white;
+  margin: 5px 5px 10px 5px;
+  border: 0px; }
+
+.inputbtn {
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #000;
+  border-style: none;
+  margin: 5px 5px 10px 5px;
+  border: 0px;
+  color: #fff; }
+
+.inputbtn:hover {
+  background-color: #EEC166;
+  color: #000; }
+
+.btnRecLog {
+  color: #000; }
+
+.btnRecLog:hover {
+  color: #fff;
+  text-decoration: none; }
 
 .img-profile {
   height: 150px;
   width: 150px; }
-
-.main {
-  height: 100vh;
-  background-image: url(../images/bg_2.png);
-  background-repeat: no-repeat;
-  background-size: contain; }
 
 /*# sourceMappingURL=style.css.map */

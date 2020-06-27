@@ -1,15 +1,9 @@
 <!--<h1>{{title}}</h1>
 h2>Welcome to {{title}}</p> -->
 <section class="main">
-  <div class="container fluid mainBanner">
-    <div class="heading">
-      <h1>My Pet App</h1>
-      <h3>Discover new places to enjoy with the best company</h3>
-    </div>
-  </div>
 
-  <h2>Recomended places</h2>
-  <section id="places" class="recomendedPlaces">
+  <h2 class="mainHeading">Recomended places</h2>
+  <section id="places">
     {{#if user._id}}
     <form action="/favorites/{{parkId}}" method="POST">
       <button type="submit">
@@ -22,11 +16,8 @@ h2>Welcome to {{title}}</p> -->
       {{> cardPlaces this}}
       {{/each}}
     </div>
-
   </section>
   <section id="type-of-place" class="place-type">
     {{!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet possimus id error, ea ut ipsam velit
     laudantium repellat. Ut dolorum iste expedita, repellendus fuga facilis aspernatur doloribus placeat temporibus.</p> --}}
   </section>
-
-</section>

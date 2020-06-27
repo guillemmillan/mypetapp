@@ -1,21 +1,23 @@
-<div id="form">
-  <h2>Signup</h2>
-  <form action="/signup" method="POST">
-    <label for="input-username">Username</label>
-    <input type="text" id="input-username" name="username" placeholder="Your username" />
+<div id="form" class="signup">
+  <div> 
+    <img class="logoForm" src="/images/LOGO-3.png">
+      <form class="downSign" action="/signup" method="POST">
+            <h2 class="signuptxt">Signup</h2>
+       <!-- <label for="input-email">Email</label>-->
+        <input  class="input" type="email" id="input-email" name="email" placeholder="Email" />
+        <!--<label for="input-username">Username</label>-->
+        <input class="input" type="text" id="input-username" name="username" placeholder="Uername" />
+      <!-- <label for="input-password">Password</label>-->
+        <input class="input"  type="password" name="password" id="input-password" placeholder="Password" />
 
-    <label for="input-email">Email</label>
-    <input type="email" id="input-email" name="email" placeholder="Your email" />
+        <button  class="inputbtn"  type="submit">Sign up</button>
+        <p>Have an account? <a href="/login" class="btnRecLog">Login</a></p>
 
-    <label for="input-password">Password</label>
-    <input type="password" name="password" id="input-password" placeholder="********" />
-
-    <button type="submit">Create account</button>
-
-    {{!-- error message will be added here --}}
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
+        {{!-- error message will be added here --}}
+        {{#if errorMessage}}
+          <p class="error">{{errorMessage}}</p>
+        {{/if}}
+      </form>
+   </div>
 </div>
 
