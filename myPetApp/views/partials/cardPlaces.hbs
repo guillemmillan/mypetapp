@@ -1,10 +1,10 @@
-<div class="col-md-4">
-    <div class="card-body">
-  <img class="card-img-top" src="{{this.image}}" alt="" />
-    <a href="/{{this._id}}">
-      <h5 class="card-title">{{this.name}}</h5>
-    </a>
-  
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+
+    <a href="/{{this._id}}" class="inputbtn">Details</a>
+  </div>
   {{#if user}}
   <form action="/favorites/{{_id}}" method="POST">
     <!--<form action="/favorites" method="POST"></form> -->
@@ -12,7 +12,7 @@
       {{#if favorite}}
       <img class="heart" src="/images/favorito.png">
       {{else}}
-            <img class="heart" src="/images/nofavorito.png">
+      <img class="heart" src="/images/nofavorito.png">
       {{/if}}
     </button>
   </form>
@@ -21,6 +21,9 @@
     Logueate para añadir a tus favoritos
   </a>
   {{/if}}
-  </div>
+</div>
 </div>
 <br>
+</div>
+
+<!-- Testing -->
