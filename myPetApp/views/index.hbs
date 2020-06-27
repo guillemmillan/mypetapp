@@ -1,36 +1,24 @@
 <!--<h1>{{title}}</h1>
 h2>Welcome to {{title}}</p> -->
-<div class="container fluid mainBanner">
-  <div class="heading">
-    <h1>My Pet App</h1>
-    <h3>Discover new places to enjoy with the best company</h3>
-  </div>
-</div>
-<section id="search-place" class="search-place">
-  <!--<h2>Find your place</h2>-->
-  <form class="search-input" action="/place" method="get">
-    <input type="text" placeholder="search place" name="search-place">
-    <button type="submit"><i>Search</i></button>
-  </form>
-</section>
-
-<h2>Recomended places</h2>
-<section id="places" class="recomendedPlaces">
-  {{#if user._id}}
-  <form action="/favorites/{{parkId}}" method="POST">
-    <button type="submit">
-      Favorito
-    </button>
-  </form>
-  <div>
-    {{/if}}
-    {{#each places}}
-    {{> cardPlaces this}}
-    {{/each}}
-  </div>
-
-</section>
-<section id="type-of-place" class="place-type">
-  {{!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet possimus id error, ea ut ipsam velit
+<section class="main">
+ 
+  <h2 class="mainHeading">Recomended places</h2>
+  <section id="places" class="recomendedPlaces">
+    {{#if user._id}}
+    <form action="/favorites/{{parkId}}" method="POST">
+      <button type="submit">
+        Favorito
+      </button>
+    </form>
+    <div>
+      {{/if}}
+      {{#each places}}
+      {{> cardPlaces this}}
+      {{/each}}
+    </div>
+  </section>
+  <section id="type-of-place" class="place-type">
+    {{!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet possimus id error, ea ut ipsam velit
     laudantium repellat. Ut dolorum iste expedita, repellendus fuga facilis aspernatur doloribus placeat temporibus.</p> --}}
+  </section>
 </section>
