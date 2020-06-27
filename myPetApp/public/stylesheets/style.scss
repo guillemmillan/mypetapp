@@ -1,94 +1,205 @@
 body {
   margin: 0px;
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
 }
+
+
+//Nav bar
 
 a {
-  color: #00B7FF;
+  color: #000;
 }
 
-.maninMenu{
-  position: sticky;
-  top: 0px;
-  background-color: grey;
-  display: flex;
-  display: inline-block;
-  padding: 10px;
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  position: fixed;
+  width: 100%;
+  //height: 8vh;
+  z-index: 3;
 }
 
-.mainNav {
-  float:left;
-  list-style:none;
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: white;
 }
 
-.mainNav  a{
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
   text-decoration: none;
-  color: white;
-  padding: 5px;
 }
 
-.mainNav :hover {
-  text-decoration: underline;
-  background-color: yellow;
-  padding: 5px;
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
 }
 
-.mainNav li{
-  flex-grow: 1;
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.mainBanner{
-  background-image: url(https://images.unsplash.com/photo-1489440543286-a69330151c0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 300px;
+.header .logo img {
+  width: 15vh;
+  padding-bottom: 8px;
 }
 
-.heading{
-  display:flex;
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 29px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+
+  max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+// .maninMenu {
+//   position: sticky;
+//   top: 0px;
+//   background-color: grey;
+//   display: flex;
+//   display: inline-block;
+//   padding: 10px;
+// }
+
+// .mainNav {
+//   float: left;
+//   list-style: none;
+// }
+
+// .mainNav a {
+//   text-decoration: none;
+//   color: white;
+//   padding: 5px;
+// }
+
+// .mainNav :hover {
+//   text-decoration: underline;
+//   background-color: yellow;
+//   padding: 5px;
+// }
+
+// .mainNav li {
+//   flex-grow: 1;
+// }
+
+
+.heading {
+  display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   color: black;
 }
 
-.heading h3{
-  padding: 20px 20px 20px ;
+.heading h3 {
+  padding: 20px 20px 20px;
 }
 
-.search-place{
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  position: sticky;
-  top: 0px;
-  background-color: white;
-  height: 100px;
- //flex-grow: ;
-}
-.search-input{
+
+
+.search-input {
   color: rgba($color: #000000, $alpha: 0.0)
 }
 
-.recomendedPlaces{
-display: flex;
-flex-direction: row;
-flex-grow:1;
-margin: 5% 0 5% 0;
+.recomendedPlaces {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin: 5% 0 5% 0;
 }
 
-.recomendedPlaces div{
+.recomendedPlaces div {
   width: 40%;
   height: 200px;
 }
-.img-profile{
+
+.img-profile {
   height: 150px;
   width: 150px;
 }
 
-
-
-
-
-
+.main {
+  height: 100vh;
+  background-image: url(../images/bg_2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
