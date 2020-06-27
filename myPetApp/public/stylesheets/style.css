@@ -171,4 +171,14 @@ a {
   height: 150px;
   width: 150px; }
 
+.upImg {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  background: none;
+  border: none; }
+
+.heart {
+  height: 25px; }
+
 /*# sourceMappingURL=style.css.map */

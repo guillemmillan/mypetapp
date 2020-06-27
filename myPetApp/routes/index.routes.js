@@ -80,7 +80,7 @@ router.post("/favorites/:placeId", async (req, res) => {
     })
     console.log('Parque quitado con éxtio GUILLLEM!', quitarParque)
   }
-  res.redirect("/favorites")
+  res.redirect("/")
 })
 
 // Delete pet

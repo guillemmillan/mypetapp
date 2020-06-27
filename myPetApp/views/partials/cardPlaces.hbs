@@ -1,18 +1,18 @@
 <div class="col-md-4">
+    <div class="card-body">
   <img class="card-img-top" src="{{this.image}}" alt="" />
-  <div class="card-body">
     <a href="/{{this._id}}">
       <h5 class="card-title">{{this.name}}</h5>
     </a>
-  </div>
+  
   {{#if user}}
   <form action="/favorites/{{_id}}" method="POST">
     <!--<form action="/favorites" method="POST"></form> -->
-    <button type="submit">
+    <button type="submit" class="upImg">
       {{#if favorite}}
-      Ya es favorito
+      <img class="heart" src="/images/favorito.png">
       {{else}}
-      Agregalo a favorito
+            <img class="heart" src="/images/nofavorito.png">
       {{/if}}
     </button>
   </form>
@@ -21,5 +21,6 @@
     Logueate para añadir a tus favoritos
   </a>
   {{/if}}
+  </div>
 </div>
 <br>
