@@ -7,6 +7,7 @@ const Place = require("../models/Place.model");
 const mongoose = require("mongoose");
 const router = Router();
 const Pet = require("../models/Pet.model");
+const uploadCloud = require('../configs/cloudinary.js');
 
 router.get("/signup", async (req, res) => res.render("auth/signup"));
 

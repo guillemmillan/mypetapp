@@ -1,7 +1,7 @@
 {{#if user}}
 <h2>What pet {{ user.username }} do want to add?</h2>
 <p>Add your pets with this form</p>
-<form action="pet-add" method="POST">
+<form action="pet-add" method="POST" enctype="multipart/form-data">
   <label for="">What his name:</label>
   <input type="text" name="name">
   <br>
@@ -13,6 +13,8 @@
   <br>
   <label for="">Breed:</label>
   <input type="text" name="breed">
+  <label  for="image">Sube la foto</label>
+            <input  type="file" name="image">
   <button type="submit">ADD</button>
 </form>
 </form>

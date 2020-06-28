@@ -3,7 +3,9 @@ const router = express.Router();
 const Place = require("../models/Place.model.js");
 const User = require("../models/User.model");
 const Pet = require("../models/Pet.model");
-const WithAuth = require('../utils/utils')
+const WithAuth = require('../utils/utils');
+
+const uploadCloud = require('../configs/cloudinary.js');
 
 
 router.get("/signup", async (req, res) => res.render("auth/signup"));
@@ -130,21 +132,25 @@ router.get('/pet-add', (req, res) => {
   })
 })
 
-
-router.post('/pet-add', async (req, res) => {
+//RUTA POST PETS
+router.post('/pet-add',uploadCloud.single('image'), async (req, res) => {
   const {
     _id: userId
   } = req.session.currentUser
-
+  const imgPath = req.file.path;
+  const imgName = req.file.originalname;
   const {
     name,
     age,
-    breed
+    breed,
+
   } = req.body;
   const newPet = await Pet.create({
     name,
     age,
-    breed
+    breed,
+    imgPath,
+    imgName 
   })
   console.log(newPet)
   const updateUser = await User.findByIdAndUpdate({

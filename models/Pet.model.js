@@ -3,11 +3,14 @@ const Schema = mongoose.Schema;
 
 const petSchema = new Schema({
   name: String,
-  image:{
+  imgName: String,
+  imgPath: String,
+
+  /*image:{
       type: String,
     default:'../public/images/pet-default.png'
-    /*    default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/pet-default.png*/   
-  },
+    /*    default:'https://raw.githubusercontent.com/guillemmillan/mypetapp/master/myPetApp/public/images/pet-default.png  
+  }*/ 
     age: Number,
     breed: String
 });
