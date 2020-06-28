@@ -11,4 +11,6 @@
 
 {{#each pets}}
 <h1>{{this.name}}</h1>
+<a href="/pets/{{this._id}}" class="edit-button">DETAILS</a>
+<a href="/pets/delete/{{this._id}}" class="edit-button">DELETE</a>
 {{/each}}

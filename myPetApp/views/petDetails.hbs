@@ -1,0 +1,15 @@
+<div>
+  <img class="card-img-top" src="{{pet.image}}" alt="" />
+  <div class="card-body">
+    <h2>My name is {{pet.name}}</h2>
+    <p>I am {{pet.breed}}</p>
+    <p>My age is {{pet.age}}</p>
+  </div>
+  {{#if user._id}}
+  <a href="/pets">Go back to all your pets</a>
+  {{else}}
+  <a href="/">
+    Go back to home
+  </a>
+  {{/if}}
+  

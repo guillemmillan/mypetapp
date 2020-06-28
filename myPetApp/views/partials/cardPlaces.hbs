@@ -1,15 +1,18 @@
-<div class="col-md-4">
-  <img class="card-img-top" src="{{this.image}}" alt="" />
+<div class="cardsModifed shadow" style="width: 18rem;">
+  <img class="card-img-top" src="{{this.image}}" alt="Place image">
   <div class="card-body">
-    <a href="/{{this._id}}">
-      <h5 class="card-title">{{this.name}}</h5>
-    </a>
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="/{{this._id}}" class="detailsBtn">Details</a>
   </div>
   {{#if user}}
   <form action="/favorites/{{_id}}" method="POST">
     <!--<form action="/favorites" method="POST"></form> -->
-    <button type="submit">
-      Favorito
+    <button type="submit" class="upImg">
+      {{#if favorite}}
+      <img class="heart" src="/images/favorito.png">
+      {{else}}
+      <img class="heart" src="/images/nofavorito.png">
+      {{/if}}
     </button>
   </form>
   {{else}}
@@ -19,3 +22,5 @@
   {{/if}}
 </div>
 <br>
+
+<!-- Testing -->

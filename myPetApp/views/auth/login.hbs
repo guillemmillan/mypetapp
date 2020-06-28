@@ -1,16 +1,15 @@
-<div id="form">
-    <h2>Login</h2>
-    <form action="/login" method="POST">
-        <label for="input-email">Email</label>
-        <input type="email" id="input-email" name="email" placeholder="Your email" />
-
-        <label for="input-password">Password</label>
-        <input type="password" name="password" id="input-password" placeholder="********" />
-
-        <button type="submit">Login</button>
-
-        {{#if errorMessage}}
-        <p class="error">{{errorMessage}}</p>
-        {{/if}}
-    </form>
+<div id="form" class="signup">
+    <div>
+        <img class="logoForm" src="/images/LOGO-3.png">
+        <form class="downLog" action="/login" method="POST">
+         <h2 class="signuptxt">Login</h2>
+            <input class="input" type="email" id="input-email" name="email" placeholder="Your email" />
+            <input class="input" type="password" name="password" id="input-password" placeholder="Password" />
+            <button class="inputbtn" type="submit">Login</button>
+            <p>Need an account? <a href="/signup" class="btnRecLog">Signup</a></p>
+            {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+            {{/if}}
+        </form>
+     </div>
 </div>
