@@ -12,8 +12,10 @@ const bcrypt = require("bcryptjs");
 
 mongoose
   .connect(process.env.MONGODB_URI, {
+
     useNewUrlParser: true,
     useCreateIndex: true,
+
     useUnifiedTopology: true
   })
   .then((x) => {
