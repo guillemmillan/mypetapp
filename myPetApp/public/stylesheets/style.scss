@@ -210,13 +210,47 @@ a {
 }
 
 //INDEX
-.upImg{
+.upImg {
   position: absolute;
-   top: 50px;
+  top: 124px;
   left: 60px;
-  background: none; 
+  background: none;
   border: none;
 }
-.heart{
-    height: 25px;
+
+.heart {
+  height: 25px;
+}
+
+.detailsBtn {
+  width: 238px;
+  background-color: #EEC166;
+  padding: 10px;
+  border-radius: 33px;
+  border-style: none;
+  margin: 5px 5px 10px 5px;
+  border: 0px;
+  color: #fff;
+  display: inline-flex;
+  padding-left: 37%;
+}
+
+.detailsBtn:hover {
+  background-color: #EEC166;
+}
+
+.marginCards {
+  padding-left: 11%;
+}
+
+.cardsModifed {
+  border-radius: 1.25rem;
+  border: none;
+  background-color: white;
+}
+
+.cardsModifed img {
+  border-top-right-radius: 1.25rem;
+  border-top-left-radius: 1.25rem;
+  border: none;
 }

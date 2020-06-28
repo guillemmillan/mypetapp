@@ -1,9 +1,8 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+<div class="cardsModifed shadow" style="width: 18rem;">
+  <img class="card-img-top" src="{{this.image}}" alt="Place image">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}</h5>
-
-    <a href="/{{this._id}}" class="inputbtn">Details</a>
+    <a href="/{{this._id}}" class="detailsBtn">Details</a>
   </div>
   {{#if user}}
   <form action="/favorites/{{_id}}" method="POST">
@@ -22,8 +21,6 @@
   </a>
   {{/if}}
 </div>
-</div>
 <br>
-</div>
 
 <!-- Testing -->
