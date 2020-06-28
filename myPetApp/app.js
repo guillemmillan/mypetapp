@@ -11,8 +11,10 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 
 mongoose
-  .connect("mongodb://localhost/mypetapp", {
-    useNewUrlParser: true
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
   })
   .then((x) => {
     console.log(
