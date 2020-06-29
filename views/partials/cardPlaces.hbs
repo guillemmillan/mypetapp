@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title">{{this.name}}</h5>
     <a href="/{{this._id}}" class="detailsBtn">Details</a>
-  </div>
+  
   {{#if user}}
   <form action="/favorites/{{_id}}" method="POST">
     <!--<form action="/favorites" method="POST"></form> -->
@@ -20,6 +20,7 @@
     Logueate para añadir a tus favoritos
   </a>
   {{/if}}
+  </div>
 </div>
 <br>
 
