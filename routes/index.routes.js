@@ -27,15 +27,24 @@ router.get("/contact", (req, res) => {
 router.get("/favorites", async (req, res) => {
   try {
 
-    const {
-      _id: userId
-    } = req.session.currentUser
-    console.log(req.session.currentUser)
-    const user = await User.findById({
-      _id: userId
-    }).populate('parques').lean()
-    console.log(user)
-    res.render("users/favorites", user);
+    if (req.session.currentUser == undefined) {
+
+      res.redirect('/login')
+
+    } else {
+
+      const {
+        _id: userId
+      } = req.session.currentUser
+      console.log(req.session.currentUser)
+
+      const user = await User.findById({
+        _id: userId
+      }).populate('parques').lean()
+      console.log(user)
+      res.render("users/favorites", user);
+    }
+
 
   } catch (error) {
     console.log(error)
@@ -133,7 +142,7 @@ router.get('/pet-add', (req, res) => {
 })
 
 //RUTA POST PETS
-router.post('/pet-add',uploadCloud.single('image'), async (req, res) => {
+router.post('/pet-add', uploadCloud.single('image'), async (req, res) => {
   const {
     _id: userId
   } = req.session.currentUser
@@ -150,7 +159,7 @@ router.post('/pet-add',uploadCloud.single('image'), async (req, res) => {
     age,
     breed,
     imgPath,
-    imgName 
+    imgName
   })
   console.log(newPet)
   const updateUser = await User.findByIdAndUpdate({
