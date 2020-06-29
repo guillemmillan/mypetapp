@@ -1,5 +1,6 @@
 {{#if user}}
-<h2>What pet {{ user.username }} do want to add?</h2>
+<section class="mainpets"> 
+<h2 class="Pet-headline">What pet {{ user.username }} do want to add?</h2>
 <p>Add your pets with this form</p>
 <form action="pet-add" method="POST" enctype="multipart/form-data">
   <label for="">What his name:</label>
@@ -21,3 +22,4 @@
 {{else}}
 <p>Still no logged in user, sorry!</p>
 {{/if}}
+</section>

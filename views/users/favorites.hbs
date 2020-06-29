@@ -1,16 +1,28 @@
-<h2>Favorite</h2>
+<section class="main"> 
+  <h1 class="favorites-h1">Favorites</h1>
 
-{{#if _id}}
-<h2>Your favorites places, {{username}}!</h2>
-<p>This is your profile page my friend!</p><span><img src="{{image}}" /> </span>
-{{/if}}
+  {{#if _id}}
+  <h2 class="favorites-h2">Your favorites places, {{username}}!</h2>
+  <p class="favorites-p">See all the details of the your favorites places with one click</p>
+  {{/if}}
 
-{{#each parques}}
-<div class="col-md-4">
-  <img class="card-img-top img-profile" src="{{image}}" alt="" />
+  {{#each parques}}
+  <section class="main marginCards"> 
+  <div class="space-between"> 
+  <div class="cardsModifed shadow" style="width: 18rem;">
+  <img class="card-img-top" src="{{this.image}}" alt="Place image">
   <div class="card-body">
-    <a href="/{{this._id}}">
-      <h5 class="card-title">{{this.name}}</h5>
-    </a>
-  </div>
-  {{/each}}
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="/{{this._id}}" class="detailsBtn">Details</a>
+    </div>
+    </div>
+    </section>
+  <!--<div class="col-md-4">
+    <img class="card-img-top img-profile" src="{{image}}" alt="" />
+    <div class="card-body">
+      <a href="/{{this._id}}">
+        <h5 class="card-title">{{this.name}}</h5>
+      </a>
+    </div>-->
+    {{/each}}
+  </section>

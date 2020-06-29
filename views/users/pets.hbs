@@ -1,5 +1,6 @@
 {{#if _id}}
-<h2>Your pets {{ user.username }}!</h2>
+<section class="mainpets"> 
+<h2 class="Pet-headline">Pets</h2>
 <p>This is your pets page my friend!</p>
 <div class="btn-add">
   <a href="/pet-add">Add your pet</a>
@@ -14,3 +15,4 @@
 <a href="/pets/{{this._id}}" class="edit-button">DETAILS</a>
 <a href="/pets/delete/{{this._id}}" class="edit-button">DELETE</a>
 {{/each}}
+</section> 
