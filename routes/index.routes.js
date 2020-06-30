@@ -240,6 +240,10 @@ router.get("/places/:placeId", async (req, res) => {
 });
 
 // Ad places
+router.get("/placeAdd", (req, res) => {
+  res.render("users/place-add");
+});
+
 router.post("/placeAdd", uploadCloud.single("image"), async (req, res) => {
   const {
     file: {
@@ -260,16 +264,6 @@ router.post("/placeAdd", uploadCloud.single("image"), async (req, res) => {
     imgName: originalname,
   });
   console.log(newPlace);
-  // const updateUser = await User.findByIdAndUpdate({
-  //   _id: userId,
-  // }, {
-  //   $push: {
-  //     pets: newPet._id,
-  //   },
-  // }, {
-  //   new: true,
-  // });
-  // console.log(updateUser.pets);
   res.redirect("/");
 });
 
