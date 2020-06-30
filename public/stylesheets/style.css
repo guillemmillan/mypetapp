@@ -1,7 +1,8 @@
 body {
   margin: 0px;
   padding: 0px;
-  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  background-color: #EEC166; }
 
 .main {
   height: 100%;
@@ -208,6 +209,25 @@ a {
   border-top-left-radius: 1.25rem;
   border: none; }
 
+.mainprofile {
+  height: 100vh;
+  background-image: url(../images/bg_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.profile {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.btnProfile {
+  float: left;
+  width: 40%;
+  height: 80px;
+  margin: 5%; }
+
 .favorites-h1 {
   padding-top: 70px;
   margin: 0 20px 20px 20px; }
@@ -250,5 +270,21 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; }
+
+.background404 {
+  background-color: #EEC166;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh; }
+
+.error404 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center; }
+
+.error404img {
+  max-width: 375px; }
 
 /*# sourceMappingURL=style.css.map */
