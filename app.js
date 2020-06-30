@@ -59,9 +59,8 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
-app.use(function (req, res, next) {
-  res.status(404).render('404');
-});
+
+
 
 //Partials
 
@@ -71,10 +70,16 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 app.locals.title = "My pet App";
 
+
 const index = require("./routes/index.routes");
 const authRouter = require("./routes/auth.routes");
 
+
 app.use("/", authRouter);
 app.use("/", index);
+
+
+
+
 
 module.exports = app;

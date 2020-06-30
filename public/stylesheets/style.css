@@ -1,8 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font: 14px "Roboto", Helvetica, Arial, sans-serif;
-  background-color: #EEC166; }
+  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
 
 .main {
   height: 100%;
@@ -115,12 +114,13 @@ a {
 .signup {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 14%; }
 
 .logoForm {
   margin-top: 45%;
@@ -210,23 +210,22 @@ a {
   border: none; }
 
 .mainprofile {
-  height: 100vh;
   background-image: url(../images/bg_2.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding-bottom: 60%; }
 
 .profile {
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
   text-align: center; }
 
-.btnProfile {
-  float: left;
-  width: 40%;
-  height: 80px;
-  margin: 5%; }
+.paddingtop {
+  padding-top: 70px; }
+
+.margin {
+  padding: 40px; }
 
 .favorites-h1 {
   padding-top: 70px;
@@ -262,14 +261,83 @@ a {
   align-items: center; }
 
 .Pet-headline {
-  padding-top: 70px; }
+  padding-top: 70px;
+  text-align: center; }
+
+.pets {
+  float: left; }
+
+.myPets {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.inputbtnPetsDetails {
+  align-items: center;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #062899;
+  border-style: none;
+  margin: 10px;
+  border: 0px;
+  color: #fff;
+  text-decoration: none; }
+
+.inputbtnPetsDelete {
+  align-items: center;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #ff0707;
+  border-style: none;
+  margin: 10px;
+  border: 0px;
+  color: #fff;
+  text-decoration: none; }
+
+.inputbtnAddPet {
+  text-decoration: none;
+  align-items: center;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: black;
+  border-style: none;
+  margin: 10px;
+  border: 0px;
+  color: #fff; }
 
 .mainpets {
-  height: 100vh;
   background-image: url(../images/bg_2.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  text-align: center;
+  padding-bottom: 100%; }
+
+.imgPet {
+  height: 50%; }
+
+.bgpet {
+  background-image: url(../images/bg_2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh; }
+
+.cropped1 {
+  width: 200px;
+  /* width of container */
+  height: 300px;
+  /* height of container */
+  object-fit: cover;
+  border: 5px solid black;
+  margin-bottom: 20px; }
+
+.petsbtn {
+  margin-top: 20px; }
 
 .background404 {
   background-color: #EEC166;
