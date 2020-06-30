@@ -1,20 +1,20 @@
 <!--<h2>USER PROFILE {{this.user.username}}</h2>-->
 {{#if userInSession}}
-<h2>Welcome, {{ userInSession.username }}!</h2>
+<section class="mainprofile"> 
+    <div class="profile"> 
+<h2 class="paddingtop">Welcome, {{ userInSession.username }}!</h2>
 <p>This is your profile page my friend!</p><span><img class="img-profile" src="{{userInSession.image}}" /> </span>
-<a name="" id="" class="btn btn-primary" href="/pets" role="button">Probando rutas mascotas</a>
-<button>
-    <a href="/userProfile">Reload the page</a>
-</button>
-<br>
-<br>
-<button>
-    <a href="/favorites">Tus favoritos</a>
-</button>
+<div class="margin">
+<a name="" id="" class="inputbtn" href="/pets" role="button">My pets</a>
 
-<button>
-    <a href="/userProfile/edit">Editar perfil</a>
-</button>
+<br>
+<br>
+<a name="" id="" class="inputbtn" href="/favorites" role="button">See your favorite places</a>
+</div>
+
+
+
 {{else}}
 <p>Still no logged in user, sorry!</p>
+</section>
 {{/if}}

@@ -1,15 +1,21 @@
-<div>
-  <img class="card-img-top" src="{{pet.image}}" alt="" />
+<section class="mainpets"> 
+<div class="column">
   <div class="card-body">
-    <h2>My name is {{pet.name}}</h2>
-    <p>I am {{pet.breed}}</p>
+    <h2 class="Pet-headline">My name is {{pet.name}}</h2>
+    <p>I am a {{pet.breed}}</p>
     <p>My age is {{pet.age}}</p>
   </div>
+
+  <img class="cropped1" src="{{pet.imgPath}}" alt="pet-image" />
+  
   {{#if user._id}}
-  <a href="/pets">Go back to all your pets</a>
+  <br>
+  <a class="inputbtn" href="/pets">Go back to all your pets</a>
   {{else}}
+  <br>
+   <a class="inputbtndetails petsbtn" href="/pets">Return to pets </a>
   <a href="/">
     Go back to home
   </a>
   {{/if}}
-  
+  </section>

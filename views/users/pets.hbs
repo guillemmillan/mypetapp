@@ -1,16 +1,30 @@
 {{#if _id}}
-<h2>Your pets {{ user.username }}!</h2>
+<section class="mainpets"> 
+<h2 class="Pet-headline">Pets</h2>
 <p>This is your pets page my friend!</p>
-<div class="btn-add">
-  <a href="/pet-add">Add your pet</a>
-</div>
+
+  <a  class="inputbtnAddPet" href="/pet-add">Add your pet</a>
+<br>
 
 {{else}}
 <p>Still no logged in user, sorry!</p>
 {{/if}}
 
 {{#each pets}}
-<h1>{{this.name}}</h1>
-<a href="/pets/{{this._id}}" class="edit-button">DETAILS</a>
-<a href="/pets/delete/{{this._id}}" class="edit-button">DELETE</a>
+
+  <div class="myPets"> 
+  <h1>{{this.name}}</h1>
+  <p>{{this.bread}}</p>
+  <a class="inputbtnPetsDetails" href="/pets/{{this._id}}" class="edit-button">Details</a>
+  <br>
+  <br>
+    <a class="inputbtnPetsDelete" href="/pets/delete/{{this._id}}" class="edit-button">Delete</a>
+
+  </div>
+  
+ 
 {{/each}}
+<br>
+<br>
+<a class="inputbtn" href="userProfile">Return to profile</a>
+</section> 
