@@ -266,35 +266,40 @@ a {
   background-attachment: fixed;
   padding-bottom: 60%;
 }
-.profile{
+
+.profile {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.paddingtop{
+
+.paddingtop {
   padding-top: 70px;
 }
-.margin{
-  padding:40px;
+
+.margin {
+  padding: 40px;
 }
 
 
 //FAVORITES
 
-.favorites-h1{
+.favorites-h1 {
   padding-top: 70px;
-  margin:0 20px 20px 20px;
-}
-.space-between{
-  padding-bottom: 20px;
-  text-align: center; 
+  margin: 0 20px 20px 20px;
 }
 
-.favorites-h2{
-  margin:20px;
+.space-between {
+  padding-bottom: 20px;
+  text-align: center;
 }
-.favorites-p{
-  margin:20px;
+
+.favorites-h2 {
+  margin: 20px;
+}
+
+.favorites-p {
+  margin: 20px;
 }
 
 //PLACE DETAILS
@@ -313,7 +318,8 @@ a {
   background-color: #e0e0e0;
   color: #000;
 }
-.btn-details{
+
+.btn-details {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -322,14 +328,16 @@ a {
 
 
 //PETS
-.Pet-headline{ 
+.Pet-headline {
   padding-top: 70px;
   text-align: center;
 }
-.pets{
-float: left;
+
+.pets {
+  float: left;
 }
-.myPets{
+
+.myPets {
   background-color: white;
   width: 200px;
   height: 200px;
@@ -339,6 +347,7 @@ float: left;
   margin-right: auto;
 
 }
+
 .inputbtnPetsDetails {
   align-items: center;
   padding: 10px;
@@ -350,7 +359,8 @@ float: left;
   color: #fff;
   text-decoration: none;
 }
-.inputbtnPetsDelete{
+
+.inputbtnPetsDelete {
   align-items: center;
   padding: 10px;
   border-radius: 33px;
@@ -362,7 +372,7 @@ float: left;
   text-decoration: none;
 }
 
-.inputbtnAddPet{
+.inputbtnAddPet {
   text-decoration: none;
   align-items: center;
   padding: 10px;
@@ -372,7 +382,7 @@ float: left;
   margin: 10px;
   border: 0px;
   color: #fff;
- 
+
 }
 
 
@@ -385,50 +395,126 @@ float: left;
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  padding-bottom:100% ;
-  
+  padding-bottom: 100%;
+
 }
-.imgPet{
-height: 50%;}
+
+.imgPet {
+  height: 50%;
+}
 
 
 //PETS-DETAILS
-.bgpet{
-  background-image: url(../images/bg_2.png)  ;
+.bgpet {
+  background-image: url(../images/bg_2.png);
   background-size: cover;
   background-attachment: fixed;
-  width:100%;
+  width: 100%;
   height: 100vh;
 }
 
 
 .cropped1 {
-  width: 200px; /* width of container */
-  height: 300px; /* height of container */
+  width: 200px;
+  /* width of container */
+  height: 300px;
+  /* height of container */
   object-fit: cover;
   border: 5px solid black;
   margin-bottom: 20px;
 }
 
-.petsbtn{
-  margin-top:20px
+.petsbtn {
+  margin-top: 20px
 }
 
 //404 
-.background404{  
-  background-color:#EEC166 ;
+.background404 {
+  background-color: #EEC166;
   background-size: cover;
   background-attachment: fixed;
-  width:100%;
+  width: 100%;
   height: 100vh;
 }
-.error404{
+
+.error404 {
   display: flex;
   flex-direction: column;
   align-content: center;
   text-align: center;
 
 }
-.error404img{
-max-width: 375px;
+
+.error404img {
+  max-width: 375px;
+}
+
+
+//RESPONSIVE big screen
+@media (min-width: 700px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  }
+
+  //INDEX
+  .main {
+    height: 100%;
+    background-image: url(../images/bg_2.png);
+    padding-bottom: 100%;
+  }
+
+  .upImg {
+    position: relative;
+    background: none;
+    border: none;
+    bottom: 250px;
+  }
+
+  .heart {
+    height: 25px;
+  }
+
+  .detailsBtn {
+    width: 238px;
+    background-color: #EEC166;
+    padding: 10px;
+    border-radius: 33px;
+    border-style: none;
+    margin: 5px 5px 10px 5px;
+    border: 0px;
+    color: #fff;
+    display: inline-flex;
+    padding-left: 37%;
+  }
+
+  .detailsBtn:hover {
+    background-color: #EEC166;
+  }
+
+  .marginCards {
+    padding-left: 5%;
+  }
+
+  .cardsModifed {
+    float: left;
+    border-radius: 1.25rem;
+    border: none;
+    position: static;
+    top: 200px;
+    margin-left: 30px;
+    background-color: white;
+    margin-bottom: 50px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .cardsModifed img {
+    border-top-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    border: none;
+  }
 }

@@ -2,24 +2,24 @@
   <img class="card-img-top" src="{{this.image}}" alt="Place image">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}</h5>
-    <a href="/{{this._id}}" class="detailsBtn">Details</a>
-  
-  {{#if user}}
-  <form action="/favorites/{{_id}}" method="POST">
-    <!--<form action="/favorites" method="POST"></form> -->
-    <button type="submit" class="upImg">
-      {{#if favorite}}
-      <img class="heart" src="/images/favorito.png">
-      {{else}}
-      <img class="heart" src="/images/nofavorito.png">
-      {{/if}}
-    </button>
-  </form>
-  {{else}}
-  <a href="/login">
-    Logueate para añadir a tus favoritos
-  </a>
-  {{/if}}
+    <a href="/places/{{this._id}}" class="detailsBtn">Details</a>
+
+    {{#if user}}
+    <form action="/favorites/{{_id}}" method="POST">
+      <!--<form action="/favorites" method="POST"></form> -->
+      <button type="submit" class="upImg">
+        {{#if favorite}}
+        <img class="heart" src="/images/favorito.png">
+        {{else}}
+        <img class="heart" src="/images/nofavorito.png">
+        {{/if}}
+      </button>
+    </form>
+    {{else}}
+    <a href="/login">
+      Logueate para añadir a tus favoritos
+    </a>
+    {{/if}}
   </div>
 </div>
 <br>
