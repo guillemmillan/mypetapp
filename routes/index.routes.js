@@ -172,7 +172,7 @@ router.post('/pet-add', uploadCloud.single('image'), async (req, res) => {
     new: true
   })
   console.log(updateUser.pets)
-  res.redirect('/pet-add')
+  res.redirect('/pets')
 })
 
 //Place details

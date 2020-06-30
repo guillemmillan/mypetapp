@@ -7,10 +7,8 @@ const placeSchema = new Schema({
   location: String,
   description: String,
   dimension: String,
-  image: {
-    type: String,
-    default: '../public/images/location.default.png'
-  },
+  imgName: String,
+  imgPath: String,
   persons: Number
 });
 

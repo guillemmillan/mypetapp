@@ -1,12 +1,18 @@
 <section class="mainpets"> 
-<div class="column">
+  <div class="main">
+  <img class="card-img-top" src="{{pet.imgPath}}" alt="" />
+  <div class="card-body">
+<h2 class="Pet-headline">My name is {{pet.name}}</h2>
+    <p>I am {{pet.age}} years old</p>
+  </div>
+<!--<div class="column">
   <div class="card-body">
     <h2 class="Pet-headline">My name is {{pet.name}}</h2>
     <p>I am a {{pet.breed}}</p>
-    <p>My age is {{pet.age}}</p>
+    <p>I am {{pet.age}} years old</p>
   </div>
 
-  <img class="cropped1" src="{{pet.imgPath}}" alt="pet-image" />
+  <img class="cropped1" src="{{pet.imgPath}}" alt="pet-image" />-->
   
   {{#if user._id}}
   <br>
