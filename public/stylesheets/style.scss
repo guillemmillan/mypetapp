@@ -452,8 +452,16 @@ body {
 .error404img {
   max-width: 375px;
 }
-
-
+//PET-ADD
+.conteiner-form{
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+.form-input{
+  
+}
 //RESPONSIVE big screen
 @media (min-width: 700px) {
   body {

@@ -11,7 +11,7 @@ body {
   background-attachment: fixed; }
 
 .mainHeading {
-  padding-top: 20%; }
+  padding-top: 5%; }
 
 .toggler-modifed {
   border-color: white; }
@@ -259,6 +259,12 @@ body {
 
 .error404img {
   max-width: 375px; }
+
+.conteiner-form {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px; }
 
 @media (min-width: 700px) {
   body {
