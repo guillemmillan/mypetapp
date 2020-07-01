@@ -1,29 +1,49 @@
-<div class="main">
-  <img class="card-img-top" src="{{place.imgPath}}" alt="Place image" />
-  <div class="card-body">
-    <h2>{{place.name}}</h2>
-    <p>{{place.description}}</p>
-  </div>
-
-  <div class="text-center">
-
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalRegular">MAP</button>
-
-
-    {{#if user._id}}
-    <div class="btn-details">
-      <a href="/favorites" class="inputbtndetails">Go back to favorites places</a>
+<section class="text-Details">
+  <div class="container fill background-size"
+    style="background: url(https://i.postimg.cc/ZnHTP71s/aircraft-airplane-boat-1575833.jpg)">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="content">
+          <h1>{{place.name}}</h1>
+        </div>
+      </div>
     </div>
-    {{else}}
-    <div class="btn-details">
-      <a href="/" class="inputbtndetails">
-        Go back to home
-      </a>
-    </div>
-    {{/if}}
   </div>
+</section>
 
+
+
+
+
+
+{{!-- <div class="main">
+  <img class="card-img-top" src="https://media-edg.barcelona.cat/wp-content/uploads/2016/01/AZ8Q4115.jpg"
+    alt="Place image" />
+  {{!-- <img class="card-img-top" src="{{place.imgPath}}" alt="Place image" /> --}}
+<div class="card-body">
+  <h2>{{place.name}}</h2>
+  <p>{{place.description}}</p>
 </div>
+
+<div class="text-center">
+
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalRegular">MAP</button>
+
+
+  {{#if user._id}}
+  <div class="btn-details">
+    <a href="/favorites" class="inputbtndetails">Go back to favorites places</a>
+  </div>
+  {{else}}
+  <div class="btn-details">
+    <a href="/" class="inputbtndetails">
+      Go back to home
+    </a>
+  </div>
+  {{/if}}
+</div>
+
+</div> --}}
 
 <!--Modal-->
 <div class="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

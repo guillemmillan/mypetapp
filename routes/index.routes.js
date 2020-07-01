@@ -239,7 +239,7 @@ router.get("/places/:placeId", async (req, res) => {
   }
 });
 
-// Ad places
+// Add places
 router.get("/placeAdd", (req, res) => {
   res.render("users/place-add");
 });
