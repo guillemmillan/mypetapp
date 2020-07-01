@@ -12,6 +12,7 @@ body {
 
 .mainHeading {
   padding-top: 5%; }
+<<<<<<< HEAD
 
 .map-container-9,
 .map-container-10,
@@ -29,6 +30,8 @@ body {
   height: 100%;
   width: 100%;
   position: absolute; }
+=======
+>>>>>>> f1e62e6c157efc9b93e62c5f1d6ee2a9e5fb90fb
 
 .toggler-modifed {
   border-color: white; }
@@ -276,6 +279,12 @@ body {
 
 .error404img {
   max-width: 375px; }
+
+.conteiner-form {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px; }
 
 @media (min-width: 700px) {
   body {

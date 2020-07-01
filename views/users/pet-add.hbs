@@ -2,23 +2,25 @@
 <section class="mainpets"> 
 <h2 class="Pet-headline">What pet {{ user.username }} do want to add?</h2>
 <p>Add your pets with this form</p>
+<div class="conteiner-form"> 
 <form action="pet-add" method="POST" enctype="multipart/form-data">
   <label for="">What his name:</label>
-  <input type="text" name="name">
+  <input class="form-input" type="text" name="name">
   <br>
-
-  <!-- <input type="file" name="image"> -->
   <br>
   <label for="">Age:</label>
-  <input type="number" name="age">
+  <input class="form-input" type="number" name="age">
   <br>
   <label for="">Breed:</label>
-  <input type="text" name="breed">
-  <label  for="image">Sube la foto</label>
-            <input  type="file" name="image">
-  <button type="submit">ADD</button>
+  <input class="form-input" type="text" name="breed">
+  <br>
+  <label  for="image">Upload a picture</label>
+            <input class="form-input" type="file" name="image">
+            <br>
+  <button type="submit">Add pet</button>
 </form>
 </form>
+</div>
 {{else}}
 <p>Still no logged in user, sorry!</p>
 {{/if}}
