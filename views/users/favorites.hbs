@@ -7,16 +7,16 @@
   {{/if}}
 
   {{#each parques}}
-  <section class="main marginCards"> 
-  <div class="space-between"> 
-  <div class="cardsModifed shadow" style="width: 18rem;">
-  <img class="card-img-top" src="{{this.imgPath}}" alt="Place image">
-  <div class="card-body">
-    <h5 class="card-title">{{this.name}}</h5>
-    <a href="/places/{{this._id}}" class="detailsBtn">Details</a>
+  <div style="flot:left">
+      <div class="cardsModifed shadow" style="width: 18rem;">
+      <img class="card-img-top" src="{{this.imgPath}}" alt="Place image">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <a href="/places/{{this._id}}" class="detailsBtn">Details</a>
+        </div>
+      </div>
     </div>
-    </div>
-    </section>
+
   <!--<div class="col-md-4">
     <img class="card-img-top img-profile" src="{{image}}" alt="" />
     <div class="card-body">
