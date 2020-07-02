@@ -216,6 +216,9 @@ a {
 .signuptxt {
   padding-right: 70%;
 }
+.signuptxth{
+  display: none;
+}
 
 .downSign {
   display: flex;
@@ -277,7 +280,9 @@ a {
   bottom: 250px;
 
 }
-
+.display{
+  display: none;
+}
 .heart {
   height: 25px;
 }
@@ -518,7 +523,7 @@ a {
 
 .form-input {}
 
-//RESPONSIVE big screen
+//RESPONSIVE big screen// 
 @media (min-width: 700px) {
   body {
     margin: 0px;
@@ -592,4 +597,29 @@ a {
     display: flex;
     /* padding: 40px; */
   }
+  .logoForm {
+    margin-top: 15%;
+    height: 150px;
+  }
+  .input{
+    margin-left: 25% ;
+    margin-right: 25%;
+
+    justify-content: center;
+    width: 50%;
+  }
+  .inputbtn{
+    margin-left: 25% ;
+    margin-right: 25%;
+    justify-content: center;
+    width: 50%;
+  }
+  .signuptxt{
+    margin-top: 20px;
+    display: none;
+  }
+  .signuptxth{
+    text-align: center;
+  }
+  
 }
