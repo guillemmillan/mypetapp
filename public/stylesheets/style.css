@@ -318,7 +318,7 @@ a {
   border: 0px;
   color: #fff;
   display: inline-flex;
-  padding-left: 28%; }
+  padding: 0% 20% 0 20%; }
 
 .detailsBtn:hover {
   background-color: #EEC166; }
@@ -538,7 +538,7 @@ a {
     border: 0px;
     color: #fff;
     display: inline-flex;
-    padding-left: 32%; }
+    padding: 0% 20% 0 20%; }
   .detailsBtn:hover {
     background-color: #EEC166; }
   .marginCards {

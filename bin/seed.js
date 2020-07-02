@@ -32,7 +32,8 @@ const places = [{
         El parque de la Pegaso es un parque público de Barcelona que se encuentra en el Distrito de Sant Andreu. Fue creado en 1986 por Enric Batlle y Joan Roig`,
         image: 'https://media-edg.barcelona.cat/wp-content/uploads/2016/01/AZ8Q4099-760x428.jpg',
         persons: 0
-    }
+    },
+    
 
 ];
 
