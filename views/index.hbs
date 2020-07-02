@@ -3,7 +3,7 @@ h2>Welcome to {{title}}</p> -->
 
 <!-- Carrousel -->
 
-
+{{!-- 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-caption d-none d-md-block">
@@ -22,15 +22,11 @@ h2>Welcome to {{title}}</p> -->
       <img class="d-block w-100" src="/images/sld_3.jpg" alt="Third slide">
     </div>
   </div>
-</div>
+</div> --}}
 
-{{!-- <iframe width="450" height="250" frameborder="0" style="border:0"
-  src='https://www.google.com/maps/embed/v1/place?key=AIzaSyCdRIApHvycxFuoNzumbchM8rDD2p7ZckE&q=Passeig de Picasso, 21, 08003 Barcelona'
-  allowfullscreen>
-  allowfullscreen>
-</iframe> --}}
 
-<section class="main marginCards">
+
+{{!-- <section class="main marginCards">
 
   <h2 class="mainHeading">Recomended places</h2>
   <section id="places">
@@ -46,8 +42,40 @@ h2>Welcome to {{title}}</p> -->
       {{> cardPlaces this}}
       {{/each}}
     </div>
-  </section>
-  <section id="type-of-place" class="place-type">
-    {{!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eveniet possimus id error, ea ut ipsam velit
-    laudantium repellat. Ut dolorum iste expedita, repellendus fuga facilis aspernatur doloribus placeat temporibus.</p> --}}
-  </section>
+  </section> --}}
+
+
+
+
+
+
+<section id="chefs" class="chefs">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Cool places to visit</h2>
+    </div>
+
+    {{#if user._id}}
+    <form action="/favorites/{{parkId}}" method="POST">
+      <button type="submit">
+        Favorito
+      </button>
+    </form>
+    <div class="">
+      {{/if}}
+
+
+
+      <div class="row">
+
+        {{#each places}}
+
+        {{> cardPlaces this}}
+
+        {{/each}}
+
+      </div>
+
+    </div>
+</section>

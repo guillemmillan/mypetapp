@@ -1,4 +1,4 @@
-<div class="cardsModifed shadow" style="width: 18rem;">
+{{!-- <div class="cardsModifed shadow" style="width: 18rem;">
   <img class="card-img-top" src="{{this.imgPath}}" alt="Place image">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}</h5>
@@ -22,6 +22,39 @@
     {{/if}}
   </div>
 </div>
-<br>
+<br> --}}
 
-<!-- Testing -->
+
+
+<!-- Place section 2 -->
+
+<div class="col-lg-4 col-md-6">
+  <div class="member">
+    <div class="pic"><img src="/images/chefs/chefs-1.jpg" class="img-fluid" alt=""></div>
+    <div class="member-info">
+      <h3>{{this.name}}</h3>
+      <a href="/places/{{this._id}}" class="detailsBtn">Details</a>
+      <br />
+      {{#if user}}
+      <form action="/favorites/{{_id}}" method="POST">
+        <!--<form action="/favorites" method="POST"></form> -->
+        <button type="submit" class="upImg">
+          {{#if favorite}}
+          <img class="heart" src="/images/corazon_2.png">
+          {{else}}
+          <img class="heart" src="/images/corazon.png">
+          {{/if}}
+        </button>
+      </form>
+
+      {{else}}
+      <div>
+        <a href="/login">
+          Login to make it a favorite
+        </a>
+      </div>
+
+      {{/if}}
+    </div>
+  </div>
+</div>

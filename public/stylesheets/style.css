@@ -40,6 +40,90 @@ a {
   text-align: left;
   padding-top: 15%; }
 
+.chefs {
+  background-size: cover;
+  padding: 60px 0;
+  position: relative; }
+
+.chefs::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9; }
+
+.chefs .container {
+  position: relative;
+  z-index: 10; }
+
+.chefs .member {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative; }
+
+.chefs .member .pic {
+  overflow: hidden; }
+
+.chefs .member .member-info {
+  position: absolute;
+  bottom: -80px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 20px 0;
+  color: #433f39;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out; }
+
+.chefs .member h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #6c665c;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif; }
+
+.chefs .member h4::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #ffcf88;
+  bottom: 0;
+  left: calc(50% - 25px); }
+
+.chefs .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px; }
+
+.chefs .member .social {
+  margin-top: 15px; }
+
+.chefs .member .social a {
+  transition: color 0.3s;
+  color: #7a7368; }
+
+.chefs .member .social a:hover {
+  color: #ffb03b; }
+
+.chefs .member .social i {
+  font-size: 16px;
+  margin: 0 2px; }
+
+@media (max-width: 992px) {
+  .chefs .member {
+    margin-bottom: 110px; } }
+
+@media (min-width: 1024px) {
+  .chefs {
+    background-attachment: fixed; } }
+
 .userProfileDaftPunk {
   min-height: 100vh;
   min-width: 100vw;
@@ -234,7 +318,7 @@ a {
   border: 0px;
   color: #fff;
   display: inline-flex;
-  padding-left: 37%; }
+  padding-left: 28%; }
 
 .detailsBtn:hover {
   background-color: #EEC166; }
@@ -454,7 +538,7 @@ a {
     border: 0px;
     color: #fff;
     display: inline-flex;
-    padding-left: 37%; }
+    padding-left: 32%; }
   .detailsBtn:hover {
     background-color: #EEC166; }
   .marginCards {
