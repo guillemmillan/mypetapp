@@ -216,6 +216,9 @@ a {
 .signuptxt {
   padding-right: 70%;
 }
+.signuptxth{
+  display: none;
+}
 
 .downSign {
   display: flex;
@@ -277,7 +280,9 @@ a {
   bottom: 250px;
 
 }
-
+.display{
+  display: none;
+}
 .heart {
   height: 25px;
 }
@@ -319,7 +324,7 @@ a {
 
 //PROFILE
 .mainprofile {
-  background-image: url(../images/bg_2.png);
+  background-image: url(../images/bg_profile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -339,7 +344,16 @@ a {
 .margin {
   display: flex;
 }
-
+.inputbtnlt {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #000;
+  border-style: none;
+  margin: 5px 5px 10px 5px;
+  border: 0px;
+  color: #fff;
+}
 
 //FAVORITES
 
@@ -359,6 +373,10 @@ a {
 
 .favorites-p {
   margin: 20px;
+}
+.favorites-padding{
+  margin-left: 5%;
+  padding-bottom: 5%;
 }
 
 //PLACE DETAILS
@@ -508,6 +526,17 @@ a {
   max-width: 375px;
 }
 
+.error{
+  background-color: #fff;
+  color:  rgb(255, 0, 0);
+  border-radius: 33px;
+  border:  #000;
+  border: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 //PET-ADD
 .conteiner-form {
   margin: 20px;
@@ -518,7 +547,7 @@ a {
 
 .form-input {}
 
-//RESPONSIVE big screen
+//RESPONSIVE big screen// 
 @media (min-width: 700px) {
   body {
     margin: 0px;
@@ -529,7 +558,7 @@ a {
   //INDEX
   .main {
     height: 100%;
-    background-image: url(../images/bg_2.png);
+    background-image: url(../images/bg-Desktop.jpg);
     padding-bottom: 100%;
   }
 
@@ -592,4 +621,41 @@ a {
     display: flex;
     /* padding: 40px; */
   }
+  .logoForm {
+    margin-top: 15%;
+    height: 150px;
+  }
+  .input{
+    margin-left: 25% ;
+    margin-right: 25%;
+
+    justify-content: center;
+    width: 50%;
+  }
+  
+  .inputbtn{
+    margin-left: 25% ;
+    margin-right: 25%;
+    justify-content: center;
+    width: 50%;
+  }
+  
+  .inputbtnlt {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 33px;
+    background-color: #000;
+    border-style: none;
+    margin: 5px 5px 10px 5px;
+    border: 0px;
+    color: #fff;
+  }
+  .signuptxt{
+    margin-top: 20px;
+    display: none;
+  }
+  .signuptxth{
+    text-align: center;
+  }
+  
 }

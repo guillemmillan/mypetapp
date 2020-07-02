@@ -26,10 +26,10 @@
             </div>
             <div class="margin">
                 <div class="bottom">
-                    <a name="" id="" class="inputbtn" href="/pets" role="button">My pets</a>
+                    <a name="" id="" class=" inputbtnlt" href="/pets" role="button">My pets</a>
                 </div>
                 <div class="bottom">
-                    <a name="" id="" class="inputbtn" href="/favorites" role="button">Favorites Places</a>
+                    <a name="" id="" class="inputbtnlt" href="/favorites" role="button">Favorites Places</a>
                 </div>
             </div>
 
@@ -40,6 +40,9 @@
 
 
 {{else}}
-<p>Still no logged in user, sorry!</p>
+<div class="main" style="text-align: center; height: 100vh;">  
+<p style="margin-top:60px"><b>Still no logged please login to se your profile</b></p>
+<a class="inputbtn" href="/login">Login</a>
+</div>
 </section>
 {{/if}}
