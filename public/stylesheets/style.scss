@@ -75,7 +75,7 @@ a {
   max-width: 400px;
   min-width: 300px;
   height: 150px;
-  background: url(/images/woUbg3p._2jpg);
+  background: url(/images/woUbg3p.jpg);
   background-size: cover;
   background-position: center center;
   transition: all .08s linear;
@@ -344,7 +344,16 @@ a {
 .margin {
   display: flex;
 }
-
+.inputbtnlt {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #000;
+  border-style: none;
+  margin: 5px 5px 10px 5px;
+  border: 0px;
+  color: #fff;
+}
 
 //FAVORITES
 
@@ -619,11 +628,23 @@ a {
     justify-content: center;
     width: 50%;
   }
+  
   .inputbtn{
     margin-left: 25% ;
     margin-right: 25%;
     justify-content: center;
     width: 50%;
+  }
+  
+  .inputbtnlt {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 33px;
+    background-color: #000;
+    border-style: none;
+    margin: 5px 5px 10px 5px;
+    border: 0px;
+    color: #fff;
   }
   .signuptxt{
     margin-top: 20px;
