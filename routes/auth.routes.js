@@ -103,7 +103,7 @@ router.post("/login", async (req, res, next) => {
     });
     if (!currentUser) {
       return res.render("auth/login", {
-        errorMessage: "Email is not registered. Try with other email.",
+        errorMessage: "Email is not registered. Try with other email or create a new account if you didn't have.",
       });
     }
     const hasValidPassword = await bcryptjs.compare(
