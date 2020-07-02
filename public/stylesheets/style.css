@@ -294,6 +294,10 @@ a {
 .favorites-p {
   margin: 20px; }
 
+.favorites-padding {
+  margin-left: 5%;
+  padding-bottom: 5%; }
+
 .inputbtndetails {
   align-items: center;
   padding: 10px;
