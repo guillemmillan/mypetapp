@@ -1,6 +1,6 @@
 <!--<h2>USER PROFILE {{this.user.username}}</h2>-->
 {{#if userInSession}}
-<section class="mainprofile"> 
+{{!-- <section class="mainprofile"> 
     <div class="profile"> 
 <h2 class="paddingtop">Welcome, {{ userInSession.username }}!</h2>
 <p>This is your profile page my friend!</p><span><img class="img-profile" src="{{userInSession.image}}" /> </span>
@@ -10,6 +10,31 @@
 <br>
 <br>
 <a name="" id="" class="inputbtn" href="/favorites" role="button">See your favorite places</a>
+</div> --}}
+<br>
+<div class="userProfileDaftPunk">
+    <div class="shadow overflow">
+        <div id="header"></div>
+        <div id="profile">
+            <div class="image">
+                <img src="{{userInSession.image}}" alt="BG image" />
+            </div>
+            <div class="name">
+                <h2 style="text-transform: uppercase">
+                    {{ userInSession.username }}
+                </h2>
+            </div>
+            <div class="margin">
+                <div class="bottom">
+                    <a name="" id="" class="inputbtn" href="/pets" role="button">My pets</a>
+                </div>
+                <div class="bottom">
+                    <a name="" id="" class="inputbtn" href="/favorites" role="button">Favorites Places</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 

@@ -23,7 +23,7 @@ const userSchema = new Schema({
   },
   image: {
     type: String,
-    default: '../images/user-default.png'
+    default: '../images/avatar-default.png'
   },
   location: String,
   parques: [{

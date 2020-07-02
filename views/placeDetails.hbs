@@ -1,16 +1,77 @@
-<div class="main">
-  <img class="card-img-top" src="{{place.imgPath}}" alt="" />
-  <div class="card-body">
-    <h2>{{place.name}}</h2>
-    <p>{{place.description}}</p>
+<section class="text-Details">
+  <div class=" fill background-size"
+    style="background: url({{place.imgPath}})">
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="content">
+          <h1>{{place.name}}</h1>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
+
+
+
+
+
+
+{{!-- <div class="main">
+  <img class="card-img-top" src="https://media-edg.barcelona.cat/wp-content/uploads/2016/01/AZ8Q4115.jpg"
+    alt="Place image" />
+  {{!-- <img class="card-img-top" src="{{place.imgPath}}" alt="Place image" /> --}}
+<div class="card-body">
+  <p>{{place.description}}</p>
+</div>
+
+<div class="text-center">
+
+  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalRegular">MAP</button>
+
+
   {{#if user._id}}
   <div class="btn-details">
-      <a href="/favorites" class="inputbtndetails">Go back to favorites places</a>
- </div>
+    <a href="/favorites" class="inputbtndetails">Go back to favorites places</a>
+  </div>
   {{else}}
   <div class="btn-details">
     <a href="/" class="inputbtndetails">
       Go back to home
     </a>
+  </div>
   {{/if}}
+</div>
+
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Body-->
+      <div class="modal-body mb-0 p-0">
+
+        <!--Google map-->
+        <div id="map-container-google-16" class="z-depth-1-half map-container-9" style="height: 400px">
+          <iframe width="450" height="250" frameborder="0" style="border:0"
+            src='https://www.google.com/maps/embed/v1/place?key=AIzaSyCdRIApHvycxFuoNzumbchM8rDD2p7ZckE&q={{place.location}}'
+            allowfullscreen>
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+
+
+      <div class="modal-footer justify-content-center">
+
+        <button type="button" class="btn btn-outline-info btn-md" data-dismiss="modal">Close <i
+            class="fas fa-times ml-1"></i></button>
+
+      </div>
+
+    </div>
+    <!--/.Content-->

@@ -3,6 +3,9 @@ body {
   padding: 0px;
   font: 14px "Roboto", Helvetica, Arial, sans-serif; }
 
+a {
+  text-decoration: none; }
+
 .main {
   height: 100%;
   background-image: url(../images/bg_2.png);
@@ -12,6 +15,134 @@ body {
 
 .mainHeading {
   padding-top: 5%; }
+
+.text-Details {
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  color: white; }
+
+.text-Details h1 {
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 8px 13px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 18px 23px rgba(0, 0, 0, 0.1); }
+
+.background-size {
+  height: 500px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+#content {
+  text-align: left;
+  padding-top: 15%; }
+
+.userProfileDaftPunk {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(to right bottom, rgba(0, 0, 255, 0.5), rgba(0, 128, 0, 0.5)), url(/images/woUbg3p._2jpg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#header {
+  width: 50vw;
+  max-width: 400px;
+  min-width: 300px;
+  height: 150px;
+  background: url(/images/woUbg3p._2jpg);
+  background-size: cover;
+  background-position: center center;
+  transition: all .08s linear; }
+
+#profile {
+  width: 50vw;
+  max-width: 400px;
+  min-width: 300px;
+  height: 200px;
+  background: white;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-left: 25px;
+  font-family: 'Open Sans', sans-serif; }
+  #profile .image {
+    position: absolute;
+    top: -55px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 10px; }
+    #profile .image img {
+      width: inherit;
+      height: inherit;
+      border-radius: 8px; }
+  #profile .name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #444; }
+  #profile .nickname {
+    color: #888;
+    font-size: 0.9rem;
+    padding-bottom: 7px; }
+  #profile .location {
+    color: #555;
+    font-size: 0.9rem;
+    padding-left: 0px;
+    position: relative;
+    left: -5px; }
+    #profile .location .material-icons {
+      position: relative;
+      top: 3px;
+      font-size: 1rem; }
+
+.shadow {
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5); }
+
+.overflow {
+  overflow: hidden; }
+
+.following,
+.followers {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #bbb;
+  font-weight: 300; }
+
+.followers {
+  float: right;
+  padding-right: 30px; }
+
+.bottom {
+  margin-top: 10px; }
+
+.count {
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700; }
+
+.map-container-9,
+.map-container-10,
+.map-container-11 {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-container-9 iframe,
+.map-container-10 iframe,
+.map-container-11 iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 .toggler-modifed {
   border-color: white; }
@@ -54,6 +185,7 @@ body {
   border: 0px; }
 
 .inputbtn {
+  text-decoration: none;
   padding: 10px;
   border-radius: 33px;
   background-color: #000;
@@ -130,7 +262,7 @@ body {
   padding-top: 70px; }
 
 .margin {
-  padding: 40px; }
+  display: flex; }
 
 .favorites-h1 {
   padding-top: 70px;
@@ -311,6 +443,10 @@ body {
   .cardsModifed img {
     border-top-right-radius: 1.25rem;
     border-top-left-radius: 1.25rem;
-    border: none; } }
+    border: none; }
+  .margin {
+    justify-content: center;
+    display: flex;
+    /* padding: 40px; */ } }
 
 /*# sourceMappingURL=style.css.map */
