@@ -40,9 +40,12 @@ a {
   text-shadow: 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
+
 .background-size {
-  height: 600px;
+  height: 500px;
   width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
