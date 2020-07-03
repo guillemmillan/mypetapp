@@ -23,8 +23,6 @@
 ```
 GET | / |  all users can see recomended places
 
-GET | / |  all users cand find nearest places only typing the postal code  
-```
 ```
 GET | /places | user can see all the places
 

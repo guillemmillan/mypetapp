@@ -144,7 +144,7 @@ a {
   max-width: 400px;
   min-width: 300px;
   height: 150px;
-  background: url(/images/woUbg3p.jpg);
+  background: url(/images/bg_profile.jpg);
   background-size: cover;
   background-position: center center;
   transition: all .08s linear; }
@@ -236,70 +236,64 @@ a {
 .toggler-modifed {
   border-color: white; }
 
-.signup {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-image: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 14%; }
-
-.logoForm {
-  margin-top: 45%;
-  height: 150px; }
-
-.signuptxt {
-  padding-right: 70%; }
-
-.signuptxth {
-  display: none; }
-
-.downSign {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0% 5% 5% 5%; }
-
-.downLog {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 5%; }
-
-.input {
-  padding: 10px;
-  border-radius: 33px;
-  background-color: white;
-  margin: 5px 5px 10px 5px;
-  border: 0px; }
-
-.inputbtn {
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 33px;
-  background-color: #000;
-  border-style: none;
-  margin: 5px 5px 10px 5px;
-  border: 0px;
-  color: #fff; }
-
-.inputbtn:hover {
-  background-color: #EEC166;
-  color: #000; }
-
-.btnRecLog {
-  color: #000; }
-
-.btnRecLog:hover {
-  color: #fff;
-  text-decoration: none; }
-
-.img-profile {
-  height: 150px;
-  width: 150px; }
+@media (max-width: 698px) {
+  .bgFormbgForm {
+    display: none; }
+  .bodyForm {
+    display: none; }
+  .signup {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 14%; }
+  .logoForm {
+    margin-top: 45%;
+    height: 150px; }
+  .signuptxt {
+    padding-right: 70%; }
+  .signuptxth {
+    display: none; }
+  .downSign {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0% 5% 5% 5%; }
+  .downLog {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 5%; }
+  .input {
+    padding: 10px;
+    border-radius: 33px;
+    background-color: white;
+    margin: 5px 5px 10px 5px;
+    border: 0px; }
+  .inputbtn {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 33px;
+    background-color: #000;
+    border-style: none;
+    margin: 5px 5px 10px 5px;
+    border: 0px;
+    color: #fff; }
+  .inputbtn:hover {
+    background-color: #EEC166;
+    color: #000; }
+  .btnRecLog {
+    color: #000; }
+  .btnRecLog:hover {
+    color: #fff;
+    text-decoration: none; }
+  .img-profile {
+    height: 150px;
+    width: 150px; } }
 
 .upImg {
   background: none;
@@ -381,7 +375,7 @@ a {
   border: none; }
 
 .mainprofile {
-  background-image: url(../images/bg_2.png);
+  background-image: url(../images/bg_profile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -622,10 +616,162 @@ a {
     display: none; }
   .signuptxth {
     text-align: center; }
-  .text-Details {
-    height: 100%;
+
+  .signup {
+    display: none; }
+  .bgForm {
+    background-image: url("http://www.guillemmiller.com/wp-content/uploads/2020/07/bg-Desktop.jpg");
     background-size: cover;
-    background-position: center;
-    color: white; } }
+    background-repeat: no-repeat;
+    min-height: 100%;
+    height: 100vh; }
+  .bodyForm {
+    background-color: transparent; }
+  #registration-form {
+    max-width: 800px;
+    margin: 120px auto; }
+  #registration-form .image {
+    float: left;
+    background-image: url("http://www.guillemmiller.com/wp-content/uploads/2020/07/bg-Desktop.jpg");
+    height: 500px;
+    width: 50%;
+    background-size: cover;
+    background-position: 25%; }
+  #registration-form .frm {
+    float: right;
+    text-align: left;
+    height: 500px;
+    width: 50%;
+    min-width: 250px;
+    padding: 0 35px;
+    background-size: 100% 100%;
+    background-color: white; }
+  #registration-form h1 {
+    margin-top: 30px;
+    margin-bottom: 20px; }
+  #registration-form .form-control {
+    width: 90%;
+    padding: 12px 20px;
+    height: auto; }
+  .img-singlogform {
+    height: 120px;
+    margin-top: 20px;
+    margin-left: 30%; } }
+
+@media screen and (min-width: 700px) and (max-width: 700px) {
+  #registration-form .image {
+    width: 30%;
+    background-position: 60%; }
+  #registration-form .frm {
+    width: 70%; }
+  #registration-form .form-control {
+    width: 100%; } }
+
+@media screen and (min-width: 700px) and (max-width: 500px) {
+  #registration-form .image {
+    display: none; }
+  #registration-form .frm {
+    width: 100%; }
+  #registration-form h1 {
+    text-align: center; }
+  #registration-form .btn {
+    width: 100%;
+    margin-top: 20px; } }
+
+@media (min-width: 700px) {
+  .userProfileDaftPunk {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(to right bottom, rgba(0, 0, 255, 0.5), rgba(0, 128, 0, 0.5)), url(/images/woUbg3p._2jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  #header {
+    width: 50vw;
+    max-width: 400px;
+    min-width: 300px;
+    height: 150px;
+    background: url(/images/bg_profile.jpg);
+    background-size: cover;
+    background-position: center center;
+    transition: all .08s linear; }
+  #profile {
+    width: 50vw;
+    max-width: 400px;
+    min-width: 300px;
+    height: 200px;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 25px;
+    font-family: 'Open Sans', sans-serif; }
+    #profile .image {
+      position: absolute;
+      top: -55px;
+      left: 20px;
+      height: 80px;
+      width: 80px;
+      border-radius: 10px; }
+      #profile .image img {
+        width: inherit;
+        height: inherit;
+        border-radius: 8px; }
+    #profile .name {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #444; }
+    #profile .nickname {
+      color: #888;
+      font-size: 0.9rem;
+      padding-bottom: 7px; }
+    #profile .location {
+      color: #555;
+      font-size: 0.9rem;
+      padding-left: 0px;
+      position: relative;
+      left: -5px; }
+      #profile .location .material-icons {
+        position: relative;
+        top: 3px;
+        font-size: 1rem; }
+  .shadow {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5); }
+  .overflow {
+    overflow: hidden; }
+  .following,
+  .followers {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #bbb;
+    font-weight: 300; }
+  .followers {
+    float: right;
+    padding-right: 30px; }
+  .bottom {
+    margin-top: 10px; }
+  .count {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700; }
+  .map-container-9,
+  .map-container-10,
+  .map-container-11 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+  .map-container-9 iframe,
+  .map-container-10 iframe,
+  .map-container-11 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; } }
+
 
 /*# sourceMappingURL=style.css.map */
