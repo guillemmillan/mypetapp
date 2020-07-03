@@ -4,6 +4,7 @@ body {
   font: 14px "Roboto", Helvetica, Arial, sans-serif; }
 
 a {
+  color: black;
   text-decoration: none; }
 
 .main {
@@ -308,17 +309,57 @@ a {
 .heart {
   height: 25px; }
 
-.detailsBtn {
-  width: 238px;
-  background-color: #EEC166;
-  padding: 10px;
-  border-radius: 33px;
-  border-style: none;
-  margin: 5px 5px 10px 5px;
-  border: 0px;
+.boton-index {
+  display: inline-block;
+  background: #EEC166;
+  border: 0;
+  padding: 10px 24px;
   color: #fff;
-  display: inline-flex;
-  padding: 0% 20% 0 20%; }
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 70%; }
+
+.boton-index-2 {
+  margin-top: 10px;
+  display: inline-block;
+  background: black;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px; }
+
+.boton-index-2:hover {
+  background-color: #EEC166; }
+
+.boton-index-3 {
+  display: inline-block;
+  background: #EEC166;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 20%; }
+
+.boton-index-3:hover {
+  background: black; }
+
+.boton-close {
+  display: inline-block;
+  background: #EEC166;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 45%; }
+
+.boton-index:hover {
+  background-color: black; }
+
+#logueate {
+  color: black; }
 
 .detailsBtn:hover {
   background-color: #EEC166; }
@@ -528,19 +569,8 @@ a {
     bottom: 250px; }
   .heart {
     height: 25px; }
-  .detailsBtn {
-    width: 238px;
-    background-color: #EEC166;
-    padding: 10px;
-    border-radius: 33px;
-    border-style: none;
-    margin: 5px 5px 10px 5px;
-    border: 0px;
-    color: #fff;
-    display: inline-flex;
-    padding: 0% 20% 0 20%; }
   .detailsBtn:hover {
-    background-color: #EEC166; }
+    background-color: black; }
   .marginCards {
     padding-left: 5%; }
   .cardsModifed {
