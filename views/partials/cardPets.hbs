@@ -7,7 +7,7 @@
     <div class="member-info">
       <h3>{{this.name}}</h3>
       <!--<a href="/places/{{this._id}}" class="detailsBtn text-center">Details</a> -->
-      <a href="/places/{{this._id}}">
+      <a href="/pets/{{this._id}}">
         <div class="text-center boton-index">
 
           Details
@@ -17,32 +17,6 @@
 
       <br />
       <br />
-      {{#if user}}
-      <form action="/favorites/{{_id}}" method="POST">
-        <!--<form action="/favorites" method="POST"></form> -->
-        <button type="submit" class="upImg">
-          {{#if favorite}}
-          <img class="heart" src="/images/corazon_2.png">
-          {{else}}
-          <img class="heart" src="/images/corazon.png">
-          {{/if}}
-        </button>
-      </form>
-
-      {{else}}
-      <div id="logueate">
-        <p class="card-text" style="transform: rotate(0);">
-       <a href="#" class="text-secondary stretched-link"> Login to make it a favorite</a> <code></code>
-    </p>
-        <!--
-        <a href="/login" class="text-warning stretched-link"> <span>
-            Login to make it a favorite
-
-          </span>
-        </a>-->
-      </div>
-
-      {{/if}}
     </div>
   </div>
 </div>
