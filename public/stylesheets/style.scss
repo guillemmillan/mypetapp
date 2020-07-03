@@ -61,7 +61,7 @@ a {
 .chefs {
   //background: url("/images/bg-Desktop.jpg") center center no-repeat;
   background-size: cover;
-  padding: 60px 0;
+  padding: 30px 0;
   position: relative;
 }
 
@@ -73,6 +73,7 @@ a {
   top: 0;
   bottom: 0;
   z-index: 9;
+  background-color:#eec168;
 }
 
 .chefs .container {
@@ -147,6 +148,10 @@ a {
   font-size: 16px;
   margin: 0 2px;
 }
+.nostylelink{
+  text-decoration: none;
+  color: #000;
+}
 
 @media (max-width: 992px) {
   .chefs .member {
@@ -158,6 +163,9 @@ a {
   .chefs {
     background-attachment: fixed;
   }
+
+
+
 }
 
 
@@ -380,7 +388,6 @@ a {
 
 //INDEX
 .upImg {
-  position: relative;
   background: none;
   border: none;
   bottom: 250px;
@@ -392,7 +399,7 @@ a {
 }
 
 .heart {
-  height: 25px;
+  height: 40px;
 }
 
 .boton-index {
@@ -738,14 +745,15 @@ a {
   }
 
   .upImg {
-    position: relative;
     background: none;
     border: none;
     bottom: 250px;
   }
 
   .heart {
-    height: 25px;
+   height: 40px;
+   margin-top: 10px;
+
   }
 
   // .detailsBtn {
