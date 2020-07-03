@@ -17,7 +17,24 @@ a {
 .mainHeading {
   padding-top: 5%; }
 
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none; }
+
 .text-Details {
+  background-size: cover;
+  background-position: center;
+  color: white; }
+
+.mainHeading {
+  padding-top: 5%; }
+
+.text-Details {
+  height: 700px;
   background-size: cover;
   background-position: center;
   color: white; }
@@ -29,16 +46,6 @@ a {
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4);
   text-shadow: 0px 8px 13px rgba(0, 0, 0, 0.1);
   text-shadow: 0px 18px 23px rgba(0, 0, 0, 0.1); }
-
-.background-size {
-  height: 500px;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat; }
-
-#content {
-  text-align: left;
-  padding-top: 15%; }
 
 .chefs {
   background-size: cover;
@@ -128,6 +135,16 @@ a {
 @media (min-width: 1024px) {
   .chefs {
     background-attachment: fixed; } }
+
+.background-size {
+  height: 500px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+#content {
+  text-align: left;
+  padding-top: 15%; }
 
 .userProfileDaftPunk {
   min-height: 100vh;
@@ -258,6 +275,10 @@ a {
     padding-right: 70%; }
   .signuptxth {
     display: none; }
+  .signuptxt {
+    padding-right: 70%; }
+  .signuptxth {
+    display: none; }
   .downSign {
     display: flex;
     flex-direction: column;
@@ -294,6 +315,18 @@ a {
   .img-profile {
     height: 150px;
     width: 150px; } }
+
+.upImg {
+  position: relative;
+  background: none;
+  border: none;
+  bottom: 250px; }
+
+.display {
+  display: none; }
+
+.heart {
+  height: 25px; }
 
 .upImg {
   background: none;
@@ -361,14 +394,6 @@ a {
 .detailsBtn:hover {
   background-color: #EEC166; }
 
-.marginCards {
-  padding-left: 11%; }
-
-.cardsModifed {
-  border-radius: 1.25rem;
-  border: none;
-  background-color: white; }
-
 .cardsModifed img {
   border-top-right-radius: 1.25rem;
   border-top-left-radius: 1.25rem;
@@ -388,6 +413,19 @@ a {
 
 .paddingtop {
   padding-top: 70px; }
+
+.margin {
+  display: flex; }
+
+.inputbtnlt {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #000;
+  border-style: none;
+  margin: 5px 5px 10px 5px;
+  border: 0px;
+  color: #fff; }
 
 .margin {
   display: flex; }
@@ -429,6 +467,13 @@ a {
   margin: 5px 5px 10px 5px;
   border: 0px;
   color: #fff; }
+
+.favorites-p {
+  margin: 20px; }
+
+.favorites-padding {
+  margin-left: 5%;
+  padding-bottom: 5%; }
 
 .inputbtndetails:hover {
   background-color: #e0e0e0;
@@ -550,6 +595,16 @@ a {
   background-color: white;
   border-radius: 20px; }
 
+.error {
+  background-color: #fff;
+  color: red;
+  border-radius: 33px;
+  border: #000;
+  border: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
 @media (min-width: 700px) {
   body {
     margin: 0px;
@@ -616,7 +671,11 @@ a {
     display: none; }
   .signuptxth {
     text-align: center; }
-
+  .text-Details {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white; }
   .signup {
     display: none; }
   .bgForm {
@@ -772,6 +831,5 @@ a {
     height: 100%;
     width: 100%;
     position: absolute; } }
-
 
 /*# sourceMappingURL=style.css.map */
