@@ -18,7 +18,6 @@ a {
   padding-top: 5%; }
 
 .text-Details {
-  height: 700px;
   background-size: cover;
   background-position: center;
   color: white; }
@@ -618,6 +617,11 @@ a {
     margin-top: 20px;
     display: none; }
   .signuptxth {
-    text-align: center; } }
+    text-align: center; }
+  .text-Details {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white; } }
 
 /*# sourceMappingURL=style.css.map */
