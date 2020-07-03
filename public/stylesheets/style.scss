@@ -1,4 +1,29 @@
 
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none
+}
+
+//MAIN
+.main {
+  height: 100%;
+  background-image: url(../images/bg_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mainHeading {
+  padding-top: 5%;
+}
+
+
   body {
     margin: 0px;
     padding: 0px;
@@ -9,14 +34,14 @@
     text-decoration: none
   }
 
-  //MAIN
-  .main {
-    height: 100%;
-    background-image: url(../images/bg_2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+
+.text-Details {
+  //height: 700px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
 
   .mainHeading {
     padding-top: 5%;
@@ -42,12 +67,126 @@
   }
 
 
+// Cards index
+
+.chefs {
+  //background: url("/images/bg-Desktop.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  position: relative;
+}
+
+.chefs::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color:#eec168;
+}
+
+.chefs .container {
+  position: relative;
+  z-index: 10;
+}
+
+.chefs .member {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.chefs .member .pic {
+  overflow: hidden;
+}
+
+.chefs .member .member-info {
+  position: absolute;
+  bottom: -80px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 20px 0;
+  color: #433f39;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.chefs .member h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #6c665c;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.chefs .member h4::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #ffcf88;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.chefs .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+
+.chefs .member .social {
+  margin-top: 15px;
+}
+
+.chefs .member .social a {
+  transition: color 0.3s;
+  color: #7a7368;
+}
+
+.chefs .member .social a:hover {
+  color: #ffb03b;
+}
+
+.chefs .member .social i {
+  font-size: 16px;
+  margin: 0 2px;
+}
+.nostylelink{
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .chefs .member {
+    margin-bottom: 110px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chefs {
+    background-attachment: fixed;
+  }
+
+
+
+}
+
+
   .background-size {
     height: 500px;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
   }
+
 
 
   #content {
@@ -226,12 +365,22 @@
     display: none;
   }
 
+
+.signuptxt {
+  padding-right: 70%;
+}
+
+.signuptxth {
+  display: none;
+}
+=======
   .downSign {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 0% 5% 5% 5%;
   }
+
 
   .downLog {
     display: flex;
@@ -293,32 +442,105 @@
     height: 25px;
   }
 
-  .detailsBtn {
-    width: 238px;
-    background-color: #EEC166;
-    padding: 10px;
-    border-radius: 33px;
-    border-style: none;
-    margin: 5px 5px 10px 5px;
-    border: 0px;
-    color: #fff;
-    display: inline-flex;
-    padding-left: 37%;
-  }
 
-  .detailsBtn:hover {
-    background-color: #EEC166;
-  }
+//INDEX
+.upImg {
+  background: none;
+  border: none;
+  bottom: 250px;
 
-  .marginCards {
-    padding-left: 11%;
-  }
+}
 
-  .cardsModifed {
-    border-radius: 1.25rem;
-    border: none;
-    background-color: white;
-  }
+.display {
+  display: none;
+}
+
+.heart {
+  height: 40px;
+}
+
+.boton-index {
+  display: inline-block;
+  background: #EEC166;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 70%;
+}
+
+
+
+//Botones de detalles
+.boton-index-2 {
+  margin-top: 10px;
+  display: inline-block;
+  background: black;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  //width: 20%;
+}
+
+.boton-index-2:hover {
+  background-color: #EEC166;
+}
+
+.boton-index-3 {
+  display: inline-block;
+  background: #EEC166;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 20%;
+}
+
+.boton-index-3:hover {
+  background: black;
+}
+
+.boton-close {
+  display: inline-block;
+  background: #EEC166;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  width: 45%;
+}
+
+
+.boton-index:hover {
+  background-color: black;
+}
+
+#logueate {
+  color: black;
+}
+
+// .detailsBtn {
+//   width: 238px;
+//   background-color: #EEC166;
+//   padding: 10px;
+//   border-radius: 33px;
+//   border-style: none;
+//   margin: 5px 5px 10px 5px;
+//   border: 0px;
+//   color: #fff;
+//   display: inline-flex;
+//   //padding: 0% 20% 0 20%;
+// }
+
+.detailsBtn:hover {
+  background-color: #EEC166;
+}
+
 
   .cardsModifed img {
     border-top-right-radius: 1.25rem;
@@ -363,10 +585,27 @@
 
   //FAVORITES
 
+
+.margin {
+  display: flex;
+}
+
+.inputbtnlt {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 33px;
+  background-color: #000;
+  border-style: none;
+  margin: 5px 5px 10px 5px;
+  border: 0px;
+  color: #fff;
+}
+
   .favorites-h1 {
     padding-top: 70px;
     margin: 0 20px 20px 20px;
   }
+
 
   .space-between {
     padding-bottom: 20px;
@@ -397,10 +636,19 @@
     color: #fff;
   }
 
+.favorites-p {
+  margin: 20px;
+}
+
+.favorites-padding {
+  margin-left: 5%;
+  padding-bottom: 5%;
+}
   .inputbtndetails:hover {
     background-color: #e0e0e0;
     color: #000;
   }
+
 
   .btn-details {
     display: flex;
@@ -552,6 +800,18 @@
   }
 
 
+.error {
+  background-color: #fff;
+  color: rgb(255, 0, 0);
+  border-radius: 33px;
+  border: #000;
+  border: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 
 //RESPONSIVE big screen// 
@@ -570,31 +830,32 @@
   }
 
   .upImg {
-    position: relative;
     background: none;
     border: none;
     bottom: 250px;
   }
 
   .heart {
-    height: 25px;
+   height: 40px;
+   margin-top: 10px;
+
   }
 
-  .detailsBtn {
-    width: 238px;
-    background-color: #EEC166;
-    padding: 10px;
-    border-radius: 33px;
-    border-style: none;
-    margin: 5px 5px 10px 5px;
-    border: 0px;
-    color: #fff;
-    display: inline-flex;
-    padding-left: 37%;
-  }
+  // .detailsBtn {
+  //   width: 238px;
+  //   background-color: #EEC166;
+  //   padding: 10px;
+  //   border-radius: 33px;
+  //   border-style: none;
+  //   margin: 5px 5px 10px 5px;
+  //   border: 0px;
+  //   color: #fff;
+  //   display: inline-flex;
+  //   //padding: 0% 20% 0 20%; 
+  // }
 
   .detailsBtn:hover {
-    background-color: #EEC166;
+    background-color: black;
   }
 
   .marginCards {
@@ -628,25 +889,27 @@
     display: flex;
     /* padding: 40px; */
   }
+
   .logoForm {
     margin-top: 15%;
     height: 150px;
   }
-  .input{
-    margin-left: 25% ;
+
+  .input {
+    margin-left: 25%;
     margin-right: 25%;
 
     justify-content: center;
     width: 50%;
   }
-  
-  .inputbtn{
-    margin-left: 25% ;
+
+  .inputbtn {
+    margin-left: 25%;
     margin-right: 25%;
     justify-content: center;
     width: 50%;
   }
-  
+
   .inputbtnlt {
     text-decoration: none;
     padding: 10px;
@@ -657,15 +920,24 @@
     border: 0px;
     color: #fff;
   }
-  .signuptxt{
+
+  .signuptxt {
     margin-top: 20px;
     display: none;
   }
-  .signuptxth{
+
+  .signuptxth {
     text-align: center;
   }
 
-//LOGIN&SIGNUP
+  .text-Details {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  //LOGIN&SIGNUP
 
 .signup{
   display: none;
@@ -886,5 +1158,6 @@ margin-left: 30%;
   width: 100%;
   position: absolute;
 }
+
 
 }

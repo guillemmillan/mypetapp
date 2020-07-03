@@ -1,0 +1,12 @@
+.size-slider {
+    height: 50vh;
+
+}
+
+
+@media (min-width: 700px) {
+    .size-slider {
+        width: 100%;
+        height: 100%;
+    }
+}
