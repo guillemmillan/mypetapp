@@ -1,0 +1,75 @@
+{{!-- <div class="cardsModifed shadow" style="width: 18rem;">
+  <img class="card-img-top" src="{{this.imgPath}}" alt="Place image">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="/places/{{this._id}}" class="detailsBtn">Details</a>
+
+    {{#if user}}
+    <form action="/favorites/{{_id}}" method="POST">
+      <!--<form action="/favorites" method="POST"></form> -->
+      <button type="submit" class="upImg">
+        {{#if favorite}}
+        <img class="heart" src="/images/corazon_2.png">
+        {{else}}
+        <img class="heart" src="/images/corazon.png">
+        {{/if}}
+      </button>
+    </form>
+    {{else}}
+    <a href="/login">
+      Logueate para añadir a tus favoritos
+    </a>
+    {{/if}}
+  </div>
+</div>
+<br> --}}
+
+
+
+<!-- Place section 2 -->
+
+<div class="col-lg-4 col-md-6">
+  <div class="member">
+    <div class="pic"><img src="{{this.imgPath}}" class="img-fluid" alt=""></div>
+    <div class="member-info">
+      <h3>{{this.name}}</h3>
+      <!--<a href="/places/{{this._id}}" class="detailsBtn text-center">Details</a> -->
+      <a href="/places/{{this._id}}">
+        <div class="text-center boton-index">
+
+          Details
+
+        </div>
+      </a>
+
+      <br />
+      <br />
+      {{#if user}}
+      <form action="/favorites/{{_id}}" method="POST">
+        <!--<form action="/favorites" method="POST"></form> -->
+        <button type="submit" class="upImg">
+          {{#if favorite}}
+          <img class="heart" src="/images/corazon_2.png">
+          {{else}}
+          <img class="heart" src="/images/corazon.png">
+          {{/if}}
+        </button>
+      </form>
+
+      {{else}}
+      <div id="logueate">
+        <p class="card-text" style="transform: rotate(0);">
+       <a href="#" class="text-secondary stretched-link"> Login to make it a favorite</a> <code></code>
+    </p>
+        <!--
+        <a href="/login" class="text-warning stretched-link"> <span>
+            Login to make it a favorite
+
+          </span>
+        </a>-->
+      </div>
+
+      {{/if}}
+    </div>
+  </div>
+</div>

@@ -28,3 +28,26 @@
 <br>
 <a class="inputbtn" href="userProfile">Return to profile</a>
 </section> 
+
+
+
+<section id="chefs" class="chefs">
+  <div class="container">
+
+    <div class="section-title">
+      <h2 style="text-transform: uppercase; margin-bottom:25px; color:white;"><strong>Add your pets</strong></h2>
+    </div>
+
+
+      <div class="row">
+
+        {{#each places}}
+
+        {{> cardPets this}}
+
+        {{/each}}
+
+      </div>
+
+    </div>
+</section>
