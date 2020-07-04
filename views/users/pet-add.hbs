@@ -1,27 +1,67 @@
+
 {{#if user}}
-<section class="mainpets"> 
-<h2 class="Pet-headline">What pet {{ user.username }} do want to add?</h2>
-<p>Add your pets with this form</p>
-<div class="conteiner-form"> 
-<form action="pet-add" method="POST" enctype="multipart/form-data">
-  <label for="">What his name:</label>
-  <input class="form-input" type="text" name="name">
-  <br>
-  <br>
-  <label for="">Age:</label>
-  <input class="form-input" type="number" name="age">
-  <br>
-  <label for="">Breed:</label>
-  <input class="form-input" type="text" name="breed">
-  <br>
-  <label  for="image">Upload a picture</label>
-            <input class="form-input" type="file" name="image">
+
+<!--MOBILE   -->
+<div id="form" class="signup">
+    <div>
+        <img class="logoForm" src="/images/LOGO-3.png">
+          <h2  style="width:100%" >Add pet</h2>
+          <form action="pet-add" method="POST" enctype="multipart/form-data">
+
+           <label for="">What his name:</label>
+            <input class="input" type="text" id="input-email" name="name" placeholder="Name" />
             <br>
-  <button class="inputbtnpet" type="submit">Add pet</button>
-</form>
-</form>
+            <label for="">Breed:</label>
+            <input class="input" type="text" name="breed" id="input-breed" placeholder="Breed" />
+            <br>
+            <label for="">Age:</label>
+            <input class="input" type="text" name="age" id="input-age" placeholder="Age" />
+            <br>
+            <label  for="image">Upload a picture</label>
+            <input class="input"  style="width:50%" type="file" name="image" id="input-file" placeholder="file" />
+            <button class="inputbtn " type="submit">Add new pet</button>
+
+          
+        </form>
+     </div>
 </div>
-{{else}}
+
+
+
+<!-- Big screen -->
+<body class="bgForm"> 
+
+    <div class="bodyForm"> 
+    <div class="container" id="registration-form">
+         <form class="downSign" action="/pet-add" method="POST">
+            <div class="image"></div>
+            <div class="frm">
+                <h2>Add pet</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">name</label>
+                        <input type="text" class="form-control" id="email" name="name"  placeholder="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="breed">Breed</label>
+                        <input type="text" class="form-control" name="breed" id="breed" placeholder="breed">
+                    </div>
+                     <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" name="age" id="age" placeholder="age">
+                    </div>
+                     <div class="form-group">
+                        <label for="breed">Breed</label>
+                        <input type="file" class="form-control" name="image" id="image" placeholder="image" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg float-left">Send</button>
+                    </div>
+                </form>
+            </div>
+          </form>
+        </div>
+    </div>
+</body> {{else}}
 <p>Still no logged in user, sorry!</p>
 {{/if}}
-</section>

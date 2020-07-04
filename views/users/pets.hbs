@@ -1,41 +1,11 @@
-{{#if _id}}
-<section class="mainpets"> 
-<h2 class="Pet-headline">Pets</h2>
-<p>This is your pets page my friend!</p>
+<body  style="background-color: #eec168;"> 
+<section style="padding-top:70px; padding-bottom:100%" id="chefs" class="chefs">
+  <div class="container" style="height:100vh">
 
-  <a  class="inputbtnAddPet" href="/pet-add">Add your pet</a>
-<br>
-
-{{else}}
-<p>Still no logged in user, sorry!</p>
-{{/if}}
-
-{{#each pets}}
-
-  <div class="myPets"> 
-  <h1>{{this.name}}</h1>
-  <p>{{this.bread}}</p>
-  <a class="inputbtnPetsDetails" href="/pets/{{this._id}}" class="edit-button">Details</a>
-  <br>
-  <br>
-    <a class="inputbtnPetsDelete" href="/pets/delete/{{this._id}}" class="edit-button">Delete</a>
-
-  </div>
-  
- 
-{{/each}}
-<br>
-<br>
-<a class="inputbtn" href="userProfile">Return to profile</a>
-</section> 
-
-
-
-<section id="chefs" class="chefs">
-  <div class="container">
-
-    <div class="section-title">
+    <div class="section-title" style="text-align:center; margin-bottom:20px">
       <h2 style="text-transform: uppercase; margin-bottom:25px; color:white;"><strong>Add your pets</strong></h2>
+      <p style="color:white;">This is your pets page my friend!</p>
+       <a   class="inputbtnAddPet" href="/pet-add">Add your pet</a>
     </div>
 
 
@@ -48,6 +18,9 @@
         {{/each}}
 
       </div>
+       <a  class="inputbtnAddPet" href="/userProfile"><i class="fas fa-undo-alt"></i></a>
 
     </div>
+
 </section>
+</body>
