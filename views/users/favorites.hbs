@@ -1,28 +1,71 @@
-<section class="main"> 
-  <h1 class="favorites-h1">Favorites</h1>
-
+<section class="main">
+  <h1 class="favorites-h1" style="color: #FFF">Favorites</h1>
   {{#if _id}}
-  <h2 class="favorites-h2">Your favorites places, {{username}}!</h2>
+  <h2 class="favorites-h2" style="color:#FFF">Your favorites places, {{username}}!</h2>
   <p class="favorites-p">See all the details of the your favorites places with one click</p>
   {{/if}}
-
   {{#each parques}}
-  <div class="favorites-padding" style="flot:left">
-      <div class="cardsModifed shadow" style="width: 18rem;">
-      <img class="card-img-top" src="{{this.imgPath}}" alt="Place image">
-        <div class="card-body">
-          <h5 class="card-title">{{this.name}}</h5>
-          <a href="/places/{{this._id}}" class="detailsBtn">Details</a>
-        </div>
+  <!--<div class="col-lg-4 col-md-6">
+    <div class="member">
+      <div class="pic"><img src="{{this.imgPath}}" class="img-fluid" alt=""></div>
+      <div class="member-info">
+        <h3>{{this.name}}</h3>
+        <a  href="/places/{{this._id}}">
+          <div class="text-center boton-index">
+            Details
+          </div>
+        </a>
+      </div>
+        <br />
+        <br />
+        {{#if user}}
+        <form action="/favorites/{{_id}}" method="POST">
+          <button type="submit" class="upImg">
+            {{#if favorite}}
+            <img class="heart" src="/images/corazon_2.png">
+            {{else}}
+            <img class="heart" src="/images/corazon.png">
+            {{/if}}
+          </button>
+        </form>
+        {{else}}
+       
+        {{/if}}
       </div>
     </div>
-
-  <!--<div class="col-md-4">
-    <img class="card-img-top img-profile" src="{{image}}" alt="" />
-    <div class="card-body">
-      <a href="/{{this._id}}">
-        <h5 class="card-title">{{this.name}}</h5>
-      </a>
-    </div>-->
-    {{/each}}
-  </section>
+  </div>
+  -->
+  <!-- Card -->
+<div class="card promoting-card">
+  <!-- Card content -->
+  <div class="card-body d-flex flex-row">
+   
+    <!-- Content -->
+    <div>
+      <!-- Title -->
+      <h4 class="card-title font-weight-bold mb-2">{{this.name}}</h4>
+      <!-- Subtitle -->
+    </div>
+  </div>
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top rounded-0" src="{{this.imgPath}}" alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+  <!-- Card content -->
+  <div class="card-body">
+    <div class="collapse-content">
+      <!-- Text -->
+      <!-- Button -->
+      <a class="btndetails" href="/places/{{this._id}}" ><div style="width:100%" class="text-center boton-index">
+            Details
+          </div> </a>
+      
+    </div>
+  </div>
+</div>
+<!-- Card -->
+  {{/each}}
+</section>
