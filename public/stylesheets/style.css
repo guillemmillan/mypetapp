@@ -254,6 +254,8 @@ a {
   border-color: white; }
 
 @media (max-width: 698px) {
+  .big {
+    display: none; }
   .bgFormbgForm {
     display: none; }
   .bodyForm {
@@ -315,18 +317,6 @@ a {
   .img-profile {
     height: 150px;
     width: 150px; } }
-
-.upImg {
-  position: relative;
-  background: none;
-  border: none;
-  bottom: 250px; }
-
-.display {
-  display: none; }
-
-.heart {
-  height: 25px; }
 
 .upImg {
   background: none;
@@ -623,6 +613,8 @@ a {
   .heart {
     height: 40px;
     margin-top: 10px; }
+  .sm {
+    display: none; }
   .detailsBtn:hover {
     background-color: black; }
   .marginCards {
@@ -693,7 +685,7 @@ a {
     margin: 120px auto; }
   #registration-form .image {
     float: left;
-    background-image: url("http://www.guillemmiller.com/wp-content/uploads/2020/07/bg-Desktop.jpg");
+    background-image: url("http://www.guillemmiller.com/wp-content/uploads/2020/07/signUp-desketop.jpg");
     height: 500px;
     width: 50%;
     background-size: cover;
