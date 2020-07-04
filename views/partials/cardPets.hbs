@@ -1,0 +1,31 @@
+
+<!-- Place section 2 -->
+
+<div class="col-lg-4 col-md-6">
+  <div class="member">
+    <div class="pic"><img src="{{this.imgPath}}" class="img-fluid" alt=""></div>
+    <div class="member-info">
+      <h3>{{this.name}}</h3>
+      <!--<a href="/places/{{this._id}}" class="detailsBtn text-center">Details</a> -->
+      <a href="/pets/{{this._id}}">
+        <div class="text-center btneps boton-index">
+
+          Details
+
+        </div>
+      </a>
+      <br>
+      <br>
+        <a href="/pets/delete/{{this._id}}">
+        <div class="text-center boton-index">
+
+          Delete
+
+        </div>
+      </a>
+
+      <br />
+      <br />
+    </div>
+  </div>
+</div>
